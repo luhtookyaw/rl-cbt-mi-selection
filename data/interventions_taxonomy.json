@@ -1,0 +1,358 @@
+{
+  "taxonomy_name": "Therapy_Intervention_Taxonomy",
+  "version": "1.0",
+  "notes": {
+    "usage": "intervention_label maps to an intervention.id; intervention_description can be built from the fields below (goal + steps + do + avoid + template).",
+    "turn_level": "Each intervention is a single-turn micro-intervention the TherapistResponder must execute without mixing in other interventions.",
+    "format": "Use the 'template' as a soft structure; keep responses 3–8 sentences and at most 1–2 open-ended questions."
+  },
+  "interventions": [
+    {
+      "id": "MI_OQ",
+      "family": "MI",
+      "name": "Open Question",
+      "goal": "Invite exploration and autonomy; elicit more context without directing.",
+      "steps": [
+        "Ask one open-ended question that matches the client’s last utterance.",
+        "Optionally add a brief empathic lead-in."
+      ],
+      "do": [
+        "Use curious, non-leading wording",
+        "Keep it to one main question"
+      ],
+      "avoid": [
+        "Stacked/multiple questions",
+        "Advice disguised as a question",
+        "Why-questions that can feel blaming"
+      ],
+      "template": "It sounds like a lot is going on. What feels most important to talk about right now?"
+    },
+    {
+      "id": "MI_SR",
+      "family": "MI",
+      "name": "Simple Reflection",
+      "goal": "Show understanding and reduce resistance by reflecting content plainly.",
+      "steps": [
+        "Reflect the core meaning of what the client said in 1 sentence.",
+        "Follow with one gentle open question only if needed."
+      ],
+      "do": [
+        "Mirror key words and meaning",
+        "Keep tone warm and nonjudgmental"
+      ],
+      "avoid": [
+        "Adding interpretations the client didn’t imply",
+        "Challenging or correcting"
+      ],
+      "template": "You’re feeling overwhelmed by this situation. What part of it feels hardest right now?"
+    },
+    {
+      "id": "MI_CR",
+      "family": "MI",
+      "name": "Complex Reflection",
+      "goal": "Deepen emotional understanding by reflecting feeling/meaning beneath the words.",
+      "steps": [
+        "Reflect emotion + meaning (one level deeper).",
+        "Check accuracy with a brief ‘Did I get that right?’"
+      ],
+      "do": [
+        "Name emotion carefully (e.g., ‘it sounds like…’)",
+        "Use tentative language"
+      ],
+      "avoid": [
+        "Over-interpreting",
+        "Sounding certain about inner motives"
+      ],
+      "template": "It sounds like part of you wants to engage, but another part is protecting you from feeling rejected again—did I get that right?"
+    },
+    {
+      "id": "MI_AFF",
+      "family": "MI",
+      "name": "Affirmation (Strengths)",
+      "goal": "Increase self-efficacy by recognizing strengths/effort.",
+      "steps": [
+        "Identify a genuine strength/effort shown in the client’s words.",
+        "Link it to coping or change capability."
+      ],
+      "do": [
+        "Be specific and sincere",
+        "Affirm effort, values, resilience"
+      ],
+      "avoid": [
+        "Overpraising",
+        "Compliments unrelated to content"
+      ],
+      "template": "Even with everything you’re carrying, you’ve been trying to protect yourself and stay steady—that shows a lot of strength."
+    },
+    {
+      "id": "MI_SUM",
+      "family": "MI",
+      "name": "Summary Reflection",
+      "goal": "Organize the conversation and show accurate listening; set up next step.",
+      "steps": [
+        "Summarize 2–4 key points (situation, thoughts, feelings, behavior).",
+        "End with an open question about what to focus on next."
+      ],
+      "do": [
+        "Use the client’s language",
+        "Keep it concise"
+      ],
+      "avoid": [
+        "Adding new content",
+        "Turning summary into advice"
+      ],
+      "template": "So far I’m hearing: the invitation brings up fear of judgment, sadness, and a pull to withdraw. Where would you like to start—what you imagine will happen, or how to cope with the feelings?"
+    },
+    {
+      "id": "MI_DA",
+      "family": "MI",
+      "name": "Develop Discrepancy (Values vs Behavior)",
+      "goal": "Gently highlight mismatch between values/goals and current behavior to evoke motivation.",
+      "steps": [
+        "Reflect current behavior and the client’s stated value/goal.",
+        "Ask an open question that invites the client to reconcile the gap."
+      ],
+      "do": [
+        "Keep it non-judgmental",
+        "Let client generate reasons"
+      ],
+      "avoid": [
+        "Confrontation",
+        "Telling them what they ‘should’ do"
+      ],
+      "template": "On one hand avoiding contact helps you feel safer, and on the other you’ve said connection matters to you. How do you make sense of that?"
+    },
+    {
+      "id": "MI_CT",
+      "family": "MI",
+      "name": "Elicit Change Talk",
+      "goal": "Invite the client to voice desire/ability/reasons/need for change.",
+      "steps": [
+        "Ask one change-talk eliciting question.",
+        "Reflect any change talk that appears."
+      ],
+      "do": [
+        "Ask about benefits of change",
+        "Ask about confidence or small steps"
+      ],
+      "avoid": [
+        "Arguing for change",
+        "Pushing action too fast"
+      ],
+      "template": "If things went even a little better with this, what would you hope would be different?"
+    },
+    {
+      "id": "MI_RRA",
+      "family": "MI",
+      "name": "Roll with Resistance",
+      "goal": "Reduce friction by validating and staying collaborative when resistance appears.",
+      "steps": [
+        "Validate the protective function of the resistance.",
+        "Offer a choice or ask permission to continue."
+      ],
+      "do": [
+        "Normalize reluctance",
+        "Offer autonomy"
+      ],
+      "avoid": [
+        "Debate",
+        "Persuasion pressure"
+      ],
+      "template": "It makes sense that part of you wants to step back from this—it’s painful. Would it be okay if we stayed with it gently, or would you prefer a different angle?"
+    },
+
+    {
+      "id": "CBT_AGENDA",
+      "family": "CBT",
+      "name": "Set Agenda & Focus",
+      "goal": "Create structure and shared plan for the turn.",
+      "steps": [
+        "Confirm what the client wants to focus on today (1 choice).",
+        "Propose a simple next step consistent with that focus."
+      ],
+      "do": [
+        "Collaborate",
+        "Keep it brief"
+      ],
+      "avoid": [
+        "Over-structuring",
+        "Ignoring client preference"
+      ],
+      "template": "Would it be most helpful to focus on the thoughts about the wedding, the feelings coming up, or what to do next?"
+    },
+    {
+      "id": "CBT_IDENTIFY_THOUGHT",
+      "family": "CBT",
+      "name": "Identify Automatic Thought",
+      "goal": "Elicit the key automatic thought driving emotion/behavior.",
+      "steps": [
+        "Ask for the most upsetting thought in that moment.",
+        "Clarify wording as a short sentence."
+      ],
+      "do": [
+        "Use ‘What went through your mind?’",
+        "Anchor to a concrete moment"
+      ],
+      "avoid": [
+        "Jumping to reframe too early"
+      ],
+      "template": "In that moment when you saw the invitation, what was the strongest thought that flashed through your mind?"
+    },
+    {
+      "id": "CBT_LABEL_DISTORTION",
+      "family": "CBT",
+      "name": "Label Cognitive Distortion",
+      "goal": "Help client notice thinking patterns (e.g., mind reading, catastrophizing).",
+      "steps": [
+        "Name the pattern tentatively.",
+        "Ask if it fits and where else it shows up."
+      ],
+      "do": [
+        "Be gentle and tentative",
+        "Use examples"
+      ],
+      "avoid": [
+        "Sounding like you’re diagnosing",
+        "Overloading with jargon"
+      ],
+      "template": "That sounds a bit like mind-reading—assuming you know what they think. Does that fit for you?"
+    },
+    {
+      "id": "CBT_SOCRATIC_EVIDENCE",
+      "family": "CBT",
+      "name": "Socratic Evidence-Based Questioning",
+      "goal": "Test the accuracy of the thought by examining evidence for/against.",
+      "steps": [
+        "Validate emotion briefly.",
+        "Ask one evidence-for question OR one evidence-against question.",
+        "Optionally summarize evidence neutrally."
+      ],
+      "do": [
+        "Use one focused Socratic question",
+        "Stay curious, not argumentative"
+      ],
+      "avoid": [
+        "Rapid-fire questions",
+        "Debating the client"
+      ],
+      "template": "Given how painful this feels, it makes sense you’d want to avoid it. What evidence do you have that your family definitely doesn’t want you there?"
+    },
+    {
+      "id": "CBT_DECAT",
+      "family": "CBT",
+      "name": "Decatastrophizing",
+      "goal": "Reduce catastrophic thinking by exploring realistic outcomes and coping.",
+      "steps": [
+        "Ask what the worst outcome is.",
+        "Ask how likely it is and what they could do if it happened."
+      ],
+      "do": [
+        "Keep it grounded",
+        "Include coping plan"
+      ],
+      "avoid": [
+        "Minimizing fear",
+        "Forcing optimism"
+      ],
+      "template": "What feels like the worst part that could happen at the wedding—and if that happened, how might you cope or protect yourself?"
+    },
+    {
+      "id": "CBT_REFRAME",
+      "family": "CBT",
+      "name": "Generate Alternative Thought (Reframe)",
+      "goal": "Create a balanced, believable alternative to the automatic thought.",
+      "steps": [
+        "Summarize the original thought.",
+        "Ask for a more balanced alternative.",
+        "Check believability (0–100)."
+      ],
+      "do": [
+        "Make it realistic, not overly positive",
+        "Use client’s wording"
+      ],
+      "avoid": [
+        "Toxic positivity",
+        "Replacing with an unbelievable thought"
+      ],
+      "template": "If we tried a more balanced version of ‘nobody wants me there,’ what could it be that feels believable to you?"
+    },
+    {
+      "id": "CBT_BEHAVIORAL_STEP",
+      "family": "CBT",
+      "name": "Behavioral Experiment / Small Step",
+      "goal": "Test beliefs with a small action and reduce avoidance.",
+      "steps": [
+        "Propose a small, safe experiment linked to the thought.",
+        "Ask for consent and make it specific."
+      ],
+      "do": [
+        "Make it tiny and doable",
+        "Include safety/boundaries"
+      ],
+      "avoid": [
+        "Big leaps",
+        "Homework overload"
+      ],
+      "template": "Would you be open to a small step—like replying with a ‘maybe’ and asking one practical question—just to test how they respond?"
+    },
+    {
+      "id": "CBT_PROBLEM_SOLVE",
+      "family": "CBT",
+      "name": "Problem-Solving & Planning",
+      "goal": "Turn overwhelm into a step-by-step plan with options.",
+      "steps": [
+        "Define the problem in one sentence.",
+        "Brainstorm 2–3 options.",
+        "Choose one next step."
+      ],
+      "do": [
+        "Offer options and collaboration",
+        "Keep it concrete"
+      ],
+      "avoid": [
+        "Over-planning",
+        "Taking control away"
+      ],
+      "template": "Let’s break this into steps. Option A is attend briefly with boundaries, option B is decline kindly, option C is ask for support from one safe person—what feels most doable?"
+    },
+    {
+      "id": "CBT_EMOTION_LINK",
+      "family": "CBT",
+      "name": "Link Thoughts–Feelings–Behaviors",
+      "goal": "Increase insight by mapping the CBT triangle for this situation.",
+      "steps": [
+        "Name the thought, emotion, behavior in one short mapping.",
+        "Ask which link feels most changeable."
+      ],
+      "do": [
+        "Use simple language",
+        "Keep it brief"
+      ],
+      "avoid": [
+        "Over-educating",
+        "Too much jargon"
+      ],
+      "template": "When the thought is ‘they’ll judge me,’ you feel anxious and sad, and then you withdraw by not replying. Which part feels easiest to experiment with changing first?"
+    },
+    {
+      "id": "CBT_COPING_SKILL",
+      "family": "CBT",
+      "name": "Coping Skill (Grounding / Self-Compassion)",
+      "goal": "Stabilize distress so cognitive work is possible.",
+      "steps": [
+        "Acknowledge distress.",
+        "Offer one simple grounding/self-compassion step.",
+        "Ask if they want to try it now."
+      ],
+      "do": [
+        "Keep it brief and optional",
+        "Match to distress level"
+      ],
+      "avoid": [
+        "Lengthy exercises",
+        "Pushing if client resists"
+      ],
+      "template": "Before we go further, would it help to take one slow breath and name what you’re feeling, just to steady things a bit?"
+    }
+  ]
+}
