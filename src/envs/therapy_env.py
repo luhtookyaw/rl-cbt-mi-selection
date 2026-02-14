@@ -27,7 +27,7 @@ import gymnasium as gym
 from gymnasium import spaces
 
 from src.llm import call_llm_messages
-
+from src.envs.reward_function import compute_reward
 
 # ----------------------------
 # Defaults / Paths
@@ -258,14 +258,6 @@ class TherapyEnv(gym.Env):
         self._convo: List[Dict[str, str]] = []  # [{"role":"assistant/user","content":...}, ...]
         self._last_critic_raw: Optional[str] = None
         self._last_moderator_raw: Optional[str] = None
-
-        # Reward shaping weights (tune later)
-        self.r_alpha = 1.0   # reward for trust increase (delta)
-        self.r_beta = 1.5    # extra penalty for trust drop
-        self.r_step = 0.05   # per-step penalty
-        self.r_gamma = 0.5   # terminal shaping weight
-        self.r_abs = 0.1   # dense bonus for being in higher trust state
-
 
         # Track previous trust for delta reward
         self._prev_trust_level = 1
@@ -512,7 +504,7 @@ class TherapyEnv(gym.Env):
         """
         assert self._patient is not None
 
-        # ---- critic
+        # ---- critic (trust/openness)
         should_eval = True
         if self.sparse_critic:
             should_eval = (self._turn % self._interval == 0)
@@ -527,11 +519,12 @@ class TherapyEnv(gym.Env):
                 [{"role": "system", "content": critic_system}],
                 model=self.models.critic_model,
             )
+
             score = parse_trust_score(critic_text)
             if score is not None:
                 self._openness = score
 
-            # phase progression only when critic ran (same as your code)
+            # phase progression only when critic ran
             self._phase = next_phase(self._phase, self._openness)
 
             # trust follows openness
@@ -548,57 +541,32 @@ class TherapyEnv(gym.Env):
             [{"role": "system", "content": mod_system}],
             model=self.models.moderator_model,
         )
+
         end_flag = parse_yes_no(mod_text)
         if end_flag is None:
             end_flag = False
 
         self._last_moderator_raw = mod_text
 
-        # Reward design:
-        # - If sparse critic, reward only updates when critic runs; otherwise you can still return last trust_level.
-        # - Returning last trust_level each step is usually easier for PPO (dense reward).
-        # ---- reward shaping
-        # Use delta trust + step penalty + extra penalty for drops.
-        # Terminal shaping (if moderator ends) encourages ending in a good trust state.
+        # ---- reward (centralized in reward_function.py)
+        reward, rcomps = compute_reward(
+            trust_level=self._trust_level,
+            prev_trust_level=self._prev_trust_level,
+            critic_ran=should_eval,
+            end_flag=bool(end_flag),
+        )
 
-        # reward = float(self._trust_level)
-
-        # delta trust (only meaningful if critic ran and updated trust_level)
+        # Update prev trust only when critic ran (cleaner + avoids stale updates)
         if should_eval:
-            delta = float(self._trust_level - self._prev_trust_level)
-        else:
-            delta = 0.0
-
-        # step penalty (always)
-        reward = -self.r_step
-
-        # NEW: dense "absolute trust" bonus (scaled to 0..1)
-        T = float(self._trust_level)
-        reward += self.r_abs * (T / 5.0)
-
-        # reward trust increases (delta shaping)
-        reward += self.r_alpha * delta
-
-        # penalize trust drops more strongly
-        if delta < 0:
-            reward += -self.r_beta * (-delta)
-
-        # terminal shaping
-        if end_flag:
-            if self._trust_level >= 4:
-                reward += self.r_gamma * float(self._trust_level)
-            else:
-                reward += -self.r_gamma * float(6 - self._trust_level)
-
-        # update prev trust for next step
-        if should_eval:  # (optional but cleaner)
             self._prev_trust_level = int(self._trust_level)
 
         info = {
             "end_session": bool(end_flag),
             "critic_ran": bool(should_eval),
+            "reward_components": rcomps,  # super useful for debugging/plots
         }
-        return reward, bool(end_flag), info
+
+        return float(reward), bool(end_flag), info
 
     def _make_obs(self) -> dict:
         assert self._patient is not None
