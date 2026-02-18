@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import json
 import random
+import ast
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -27,12 +28,21 @@ import gymnasium as gym
 from gymnasium import spaces
 
 from src.llm import call_llm_messages
-from src.envs.reward_function import compute_reward
+from src.envs.reward_function import compute_reward, RewardConfig
+from src.envs.alliance import C_ALLIANCE_SYSTEM_PROMPT, EXAMPLE_C_ALLIANCE
+from src.envs.therapist_skills import (
+    CBT_SPECIFIC_GUIDED_DISCOVERY_SKILL,
+    CBT_SPECIFIC_FOCUS_SKILL,
+    CBT_SPECIFIC_STRATEGY_SKILL,
+    GEN_COLLABORATION,
+    GEN_INTERPERSONAL,
+    GEN_UNDERSTANDING
+)
 
 # ----------------------------
 # Defaults / Paths
 # ----------------------------
-DEFAULT_DATA_PATH = Path("data/Patient_PSi_CM_Dataset_Planning_Resistance.json")
+DEFAULT_DATA_PATH = Path("data/Patient_PSi_CM_advanced.json")
 
 DEFAULT_CLIENT_PROMPT_PATH = Path("prompts/client.txt")
 DEFAULT_THERAPIST_PROMPT_PATH = Path("prompts/therapist_system.txt")
@@ -248,6 +258,9 @@ class TherapyEnv(gym.Env):
             }
         )
 
+        # Reward config
+        self.reward_cfg = RewardConfig()
+
         # Episode state
         self._patient: Optional[dict] = None
         self._phase: str = "trust_building"
@@ -389,10 +402,16 @@ class TherapyEnv(gym.Env):
 
         self._turn += 1
 
-        # If already exceeded max turns, end.
+        # If already exceeded max turns, end (truncated)
         if self._turn > self.max_turns:
+            # Run terminal evaluation one last time
+            reward, done, info = self._evaluate_after_client()
             obs = self._make_obs()
-            return obs, 0.0, False, True, {"reason": "max_turns"}
+
+            terminated = False               # not a natural end, it's a time limit
+            truncated = True
+            info.update({"reason": "max_turns"})
+            return obs, float(reward), terminated, truncated, info
 
         action = self._get_action(int(action_index))
         intervention_label = action["id"]
@@ -427,7 +446,6 @@ class TherapyEnv(gym.Env):
 
         obs = self._make_obs()
 
-        # terminated = done (natural end). truncated = False here (we handle max_turns above)
         terminated = bool(done)
         truncated = False
 
@@ -443,6 +461,12 @@ class TherapyEnv(gym.Env):
                 "client_last": client_text,
                 "critic_raw": self._last_critic_raw,
                 "moderator_raw": self._last_moderator_raw,
+
+                # NEW: terminal logs (None unless end_flag=True)
+                "alliance_score": info.get("alliance_score"),
+                "therapist_skill_scores": info.get("therapist_skill_scores"),
+                "alliance_raw": info.get("alliance_raw"),
+                "therapist_skill_raws": info.get("therapist_skill_raws"),
             }
         )
 
@@ -548,12 +572,26 @@ class TherapyEnv(gym.Env):
 
         self._last_moderator_raw = mod_text
 
+        # ---- NEW: terminal evaluators (only when end_flag)
+        alliance_score = None
+        alliance_raw = None
+        alliance_extra = None
+        skills_scores = None
+        skills_raws = None
+
+        if bool(end_flag):
+            alliance_score, alliance_raw, alliance_extra = self._eval_alliance_terminal()
+            skills_scores, skills_raws = self._eval_therapist_skills_terminal()
+
         # ---- reward (centralized in reward_function.py)
         reward, rcomps = compute_reward(
             trust_level=self._trust_level,
             prev_trust_level=self._prev_trust_level,
             critic_ran=should_eval,
             end_flag=bool(end_flag),
+            cfg=self.reward_cfg,  # IMPORTANT: required by your updated reward_function.py
+            alliance_score=alliance_score,
+            therapist_skill_scores=skills_scores if skills_scores else None,
         )
 
         # Update prev trust only when critic ran (cleaner + avoids stale updates)
@@ -564,9 +602,180 @@ class TherapyEnv(gym.Env):
             "end_session": bool(end_flag),
             "critic_ran": bool(should_eval),
             "reward_components": rcomps,  # super useful for debugging/plots
+            # NEW: terminal logs (present only when end_flag=True)
+            "alliance_score": alliance_score,
+            "alliance_raw": alliance_raw,
+            "alliance_extra": alliance_extra,
+            "therapist_skill_scores": skills_scores,
+            "therapist_skill_raws": skills_raws,
         }
 
         return float(reward), bool(end_flag), info
+
+
+    def _parse_alliance_blocks(self, raw: str) -> Dict[str, Dict[str, Any]]:
+        results: Dict[str, Dict[str, Any]] = {}
+        if not raw:
+            return results
+
+        # Split on blank lines between dict blocks
+        blocks = [b.strip() for b in re.split(r"\n\s*\n", raw.strip()) if b.strip()]
+
+        # Fallback: sometimes blocks come without blank lines
+        if len(blocks) == 1 and raw.count("{") > 1:
+            # try to split between }{
+            tmp = re.split(r"}\s*{", raw.strip())
+            blocks = []
+            for i, b in enumerate(tmp):
+                b = b.strip()
+                if not b.startswith("{"):
+                    b = "{" + b
+                if not b.endswith("}"):
+                    b = b + "}"
+                blocks.append(b)
+
+        for b in blocks:
+            try:
+                d = ast.literal_eval(b)
+                if not isinstance(d, dict):
+                    continue
+
+                q_keys = [k for k in d.keys() if isinstance(k, str) and re.fullmatch(r"Q\d+", k)]
+                if not q_keys:
+                    continue
+
+                # pick the smallest Q number if multiple appear
+                q = sorted(q_keys, key=lambda x: int(x[1:]))[0]
+
+                s = d.get("score", None)
+                score_val = None
+                try:
+                    score_val = float(s)
+                except Exception:
+                    m = re.search(r"\b([1-5])\b", str(s))
+                    score_val = float(m.group(1)) if m else None
+
+                if score_val is None:
+                    continue
+
+                # clamp to 1..5
+                score_val = max(1.0, min(5.0, score_val))
+
+                results[q] = {
+                    "score": score_val,
+                    "reason": d.get("reason", None),
+                    "raw": d,
+                }
+            except Exception:
+                continue
+
+        return results
+
+
+    def _aggregate_alliance_scores(self, q_scores: Dict[str, Dict[str, Any]]) -> Dict[str, float]:
+        """
+        Computes mean alliance and optional subscales.
+        Assumes each score is 1..5.
+        """
+        def mean(keys):
+            vals = [q_scores[k]["score"] for k in keys if k in q_scores]
+            return sum(vals) / len(vals) if vals else None
+
+        all_keys = [f"Q{i}" for i in range(1, 13)]
+        goal_keys = [f"Q{i}" for i in range(1, 5)]
+        approach_keys = [f"Q{i}" for i in range(5, 9)]
+        bond_keys = [f"Q{i}" for i in range(9, 13)]
+
+        out: Dict[str, float] = {}
+        m_all = mean(all_keys)
+        if m_all is not None:
+            out["alliance_mean"] = float(m_all)
+
+        m_goal = mean(goal_keys)
+        if m_goal is not None:
+            out["goal_mean"] = float(m_goal)
+
+        m_app = mean(approach_keys)
+        if m_app is not None:
+            out["approach_mean"] = float(m_app)
+
+        m_bond = mean(bond_keys)
+        if m_bond is not None:
+            out["bond_mean"] = float(m_bond)
+
+        return out
+
+
+    def _eval_alliance_terminal(self) -> Tuple[Optional[float], Optional[str], dict]:
+        """
+        Returns:
+        alliance_score_mean (1..5),
+        raw_text,
+        extra_metrics dict (subscales, per-question scores)
+        """
+        convo = format_dialogue(self._convo, last_n=self.moderator_window)
+        system = C_ALLIANCE_SYSTEM_PROMPT.format(
+            conversation=convo,
+            example=json.dumps(EXAMPLE_C_ALLIANCE, ensure_ascii=False),
+        )
+
+        raw = call_llm_messages(
+            [{"role": "system", "content": system}],
+            model=self.models.critic_model,
+        )
+
+        per_q = self._parse_alliance_blocks(raw)
+        agg = self._aggregate_alliance_scores(per_q)
+
+        alliance_mean = agg.get("alliance_mean", None)
+
+        extra = {
+            "per_question": {k: v["score"] for k, v in per_q.items()},
+            "subscales": {k: v for k, v in agg.items() if k != "alliance_mean"},
+        }
+        return alliance_mean, raw, extra
+
+
+    def _eval_therapist_skills_terminal(self) -> tuple[Dict[str, float], Dict[str, str]]:
+        """
+        Returns (scores, raws).
+        Scores expected each in [0..6].
+        """
+        convo = format_dialogue(self._convo, last_n=self.moderator_window)
+
+        prompts = {
+            "guided_discovery": CBT_SPECIFIC_GUIDED_DISCOVERY_SKILL,
+            "focus": CBT_SPECIFIC_FOCUS_SKILL,
+            "strategy": CBT_SPECIFIC_STRATEGY_SKILL,
+            "understanding": GEN_UNDERSTANDING,
+            "interpersonal": GEN_INTERPERSONAL,
+            "collaboration": GEN_COLLABORATION
+        }
+
+        scores: Dict[str, float] = {}
+        raws: Dict[str, str] = {}
+
+        for name, tmpl in prompts.items():
+            system = tmpl.format(conversation=convo)
+            raw = call_llm_messages(
+                [{"role": "system", "content": system}],
+                model=self.models.critic_model,
+            )
+            raws[name] = raw
+
+            # Prompt says: "score, explanation" — so parse before comma; fallback regex 0/2/4/6
+            s = None
+            try:
+                s = float(raw.split(",", 1)[0].strip())
+            except Exception:
+                m = re.search(r"\b(0|2|4|6)\b", raw or "")
+                s = float(m.group(1)) if m else None
+
+            if s is not None:
+                scores[name] = s
+
+        return scores, raws
+
 
     def _make_obs(self) -> dict:
         assert self._patient is not None

@@ -9,7 +9,7 @@ from src.envs.obs_wrappers import LastClientEmbeddingWrapper
 from scripts.callbacks import PrintStepCallback, TherapyTensorboardCallback
 
 def make_env():
-    env = TherapyEnv(sparse_critic=False)
+    env = TherapyEnv(sparse_critic=True)
     env = LastClientEmbeddingWrapper(env)
     env = Monitor(env, "outputs/monitor.csv")  # logs episode rewards/lengths
     return env

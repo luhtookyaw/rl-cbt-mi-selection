@@ -1,0 +1,1107 @@
+[
+  {
+    "name": "Alex",
+    "id": "1-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The patient has a history of substance abuse and has been through rehab to overcome it. He has had issues with his family, particularly with his mother, where he has felt rejected and emotionally neglected. He has struggled with obesity since childhood, which has affected his self-esteem and body image. He also has a history of being victimized and bullied due to his weight.",
+    "helpless_belief": [
+      "I am trapped.",
+      "I am out of control."
+    ],
+    "unlovable_belief": [],
+    "worthless_belief": [],
+    "intermediate_belief": "Helpless: I'm just not very good at handling stress and I have poor self-control, which is why I need to not put myself in stressful situations. ",
+    "intermediate_belief_depression": "Helpless: There's nothing I can do to change my situation. I cannot control myself. So why stay clean anyway?",
+    "coping_strategies": "The patient turns to substances as a coping strategy to escape his feelings. He has been staying at his girlfriend's place to avoid his parents' influence and the associated stress. He also uses yelling and stepping away from situations to manage his low self esteem. ",
+    "situation": "I missed my alarm and work up late for work.",
+    "auto_thought": "Why can't I even do this little this right? My whole day is written off now, I might as well not do anything.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "angry, mad, irritated, annoyed"
+    ],
+    "behavior": "Called in sick. Got drunk in the morning and had a fight with girlfriend.",
+    "cognitive_distortion": "All-or-Nothing Thinking, Catastrophizing, Should Statements",
+    "cbt_technique": "Decatastrophizing",
+    "counseling_plan": "1. Introduce the Concept: Begin by discussing the recent incident of waking up late and the subsequent feelings of failure and helplessness. Explain the concept of catastrophizing and how it leads to extreme negative thoughts. 2. Identify Catastrophic Thoughts: Ask the client to share their specific thoughts about the situation, particularly focusing on the belief that their day is ruined and that they are incapable of handling stress. 3. Challenge the Catastrophe: Explore the evidence for and against the catastrophic thought. Questions like, 'What evidence do you have that this one mistake defines your entire day?' and 'What are the potential outcomes of this situation that are less extreme?' can help. 4. Generate Alternatives: Collaborate to generate a list of alternative outcomes for the day, emphasizing that one mistake does not determine overall success or self-worth. 5. Create an Action Plan: Discuss what steps the client can take to salvage their day, such as reaching out to work to explain the situation or engaging in a positive activity. 6. Practice Self-Compassion: Encourage the client to practice self-kindness and recognize that everyone makes mistakes. 7. Reinforce Learning: Conclude by summarizing the session and encouraging the client to apply this technique in future situations where they might feel overwhelmed or helpless.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "Interrupting",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Anxious",
+    "resistance_internal_monologue": "I don't really think talking about my feelings will help. Can we just move on to something else?",
+    "resistance_rationale": "The client demonstrates a tendency to interrupt discussions about feelings and coping strategies, indicative of underlying anxiety and a sense of helplessness regarding their situation. Their beliefs around control and worthlessness contribute to a reluctance to engage deeply in therapy, leading to interruptions as a defense mechanism."
+  },
+  {
+    "name": "Blaise",
+    "id": "2-3",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "Patient has been experiencing frustration, anxiety, and anger related to familial relationships. This is significantly influenced by a conversation regarding his wedding list with his parents, leading to insights about his feelings and actions similar to his father's pattern of seeking approval and unconditional love from family members who do not provide it.",
+    "helpless_belief": [
+      "I am powerless, weak, vulnerable.",
+      "I am trapped."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am undesirable, unwanted.",
+      "I am bound to be abandoned.",
+      "I am bound to be alone."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "Patient holds the belief that one must continuously seek familial approval and support to feel safe and valued. Patient also believes that investing in unhealthy familial relationships is necessary despite ongoing distress and frustration.",
+    "intermediate_belief_depression": "During periods of low mood, the patient likely adopts more polarized views on family loyalty and support, feeling an increased sense of obligation to pursue approval, which exacerbates feelings of helplessness and rejection.",
+    "coping_strategies": "Patient tends to engage in conversations with family members about emotional support and seeks to change family dynamics, though this is often met with resistance. Has begun to set boundaries concerning emotional involvement with certain family members and is slowly reducing communication as a form of self-preservation.",
+    "situation": "Anticipating father's reaction to exclusion of family members from personal events.",
+    "auto_thought": "I fear the loss of my father's support and struggle with his divided loyalties.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense"
+    ],
+    "behavior": "Voicing my perspective to my father about family dynamics, but finally give up. Adopts either passive or aggressive styles. Quickly apologizes for creating discord.",
+    "cognitive_distortion": "Fortune Telling, Mind Reading, Catastrophizing",
+    "cbt_technique": "Decatastrophizing",
+    "counseling_plan": "1. Introduce the Concept: Start the session by discussing the patient's current situation regarding their father's reaction to family dynamics. Explain the concept of 'catastrophizing' and how it may affect their perception of events, leading to anxiety and fear. 2. Identify Catastrophic Thoughts: Have the patient articulate their worst fears about the situation, such as losing their father's support or being abandoned. Write these thoughts down for clarity. 3. Evaluate the Evidence: Guide the patient to examine the evidence for and against these catastrophic beliefs. Ask questions like: 'What evidence do you have that your father will react negatively?' and 'Have there been times when your father was supportive despite disagreements?' 4. Consider Alternative Outcomes: Encourage the patient to brainstorm less extreme and more realistic outcomes of voicing their perspective to their father. Discuss how different scenarios could play out. 5. Reality Check: Help the patient assess the likelihood of their worst fears becoming reality. Use a scale from 0 to 100% to rate the likelihood of their catastrophic thoughts coming true. 6. Reframe Negative Thoughts: Collaboratively create more balanced thoughts based on the evidence and alternative outcomes discussed. For example, instead of thinking 'If I speak up, my father will abandon me,' reframe it to 'My father may not agree with me, but that doesn't mean he will stop supporting me.' 7. Practice and Prepare: Encourage the patient to practice using this reframing technique in real-life situations. They can role-play conversations with the counselor to build confidence. Remind them to reflect on their feelings after interactions with family members to reinforce positive outcomes.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "In-session withdrawal",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Withdrawn",
+    "resistance_internal_monologue": "I want to talk about my feelings, but I just feel stuck and unsure if I should even bother.",
+    "resistance_rationale": "The client experiences significant emotional distress and ambivalence regarding familial relationships, often leading to feelings of helplessness. Their tendency to withdraw when faced with difficult topics reflects a beginner level of resistance, as they struggle to engage fully despite their desire for support."
+  },
+  {
+    "name": "Jessa",
+    "id": "4-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "Jessa has recently undergone shoulder surgery and is recovering from very painful processes. She is also dealing with additional pain, numbness, and tingling due to a herniated disc in her cervical spine. Jessa has a history of physical therapy due to an inability to walk and back issues. She has experienced being very ill in the past, which led to a significant period of being unable to walk and feeling down. After recovering, she started a new relationship, but her physical symptoms resurfaced.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am powerless, weak, vulnerable.",
+      "I am a victim.",
+      "I am trapped.",
+      "I am defective."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am undesirable, unwanted.",
+      "I am bound to be abandoned."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "Jessa believes she must appear strong and cheerful to be accepted and loved.",
+    "intermediate_belief_depression": "During depressive episodes, Jessa believes that she will never be the same again and that her situation is permanent, people will eventually figure out she's actually very sick and everybody would leave her.",
+    "coping_strategies": "Jessa utilizes avoidance by trying to put on a happy face and acting as if she's feeling okay. ",
+    "situation": "Having to put on a happy face at a Halloween party despite pain.",
+    "auto_thought": "If I act as if I'm okay, others will like me and keep being friends with me. Nobody likes to stay around with very sick person.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Put on a happy face and avoided showing true feelings. Compared self with others at the party perceiving others as healthier and not distressed.",
+    "cognitive_distortion": "Emotional Reasoning, Should Statements, Overgeneralizing",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "Evidence-Based Questioning\n1. Introduce the Concept: We'll start by discussing your recent experience at the Halloween party where you felt the need to put on a happy face despite your pain. I'll explain how emotional reasoning can distort your perception of reality, leading you to believe that if you don't appear strong, you will be abandoned or unloved.\n2. Identify Negative Thoughts: Together, we will identify your automatic thoughts, such as 'If I act as if I'm okay, others will like me' and 'Nobody likes to stay around with a very sick person.' We will explore the feelings these thoughts generate, such as anxiety and sadness.\n3. Challenge the Thoughts: I will guide you through a series of evidence-based questions to challenge these thoughts:\n   - What evidence do you have that supports these thoughts?\n   - What evidence contradicts them? (e.g., times when friends supported you despite your struggles)\n   - Are there instances where being honest about your feelings has strengthened your relationships?\n4. Evaluate the Validity: We will examine the evidence you've gathered and evaluate the validity of your thoughts. I'll encourage you to consider alternative interpretations of the situation, focusing on the possibility that your friends may appreciate your honesty and vulnerability.\n5. Reframe the Thoughts: After evaluating the evidence, we will work on reframing your automatic thoughts. For example, instead of believing 'I must appear strong to be accepted,' we might reframe it to 'My friends care about me and will accept me even when I'm not feeling my best.'\n6. Practice Self-Compassion: We will discuss the importance of self-compassion and how acknowledging your pain does not make you less lovable. I will encourage you to practice self-kindness by reminding yourself that everyone has struggles and it’s okay to show vulnerability.\n7. Develop a Supportive Action Plan: Finally, we will create a plan for how you can communicate your feelings to friends and family when needed, ensuring you feel supported while also allowing them to understand your situation better. We may role-play conversations to increase your comfort level in expressing your true feelings.",
+    "resistance_type": "Direct",
+    "resistance_subtype": "Explicitly disagreeing with the treatment rationale",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Pessimistic",
+    "resistance_internal_monologue": "I know I should be working on these feelings, but I just don’t think it’s going to change anything.",
+    "resistance_rationale": "Jessa's beliefs about her helplessness and the permanence of her situation indicate a deep skepticism about the effectiveness of therapy. She feels pressured to appear strong, which may lead her to subtly resist engaging fully with treatment, despite her underlying desire to improve."
+  },
+  {
+    "name": "Daisy",
+    "id": "6-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The patient is a 28-year-old student who has been trying to assert independence and self-sufficiency, particularly in financial matters, after returning from Egypt. The patient has previously relied on parents for support but is now attempting to take on more adult responsibilities such as paying bills, managing finances, and dealing with health insurance on her own for the first time. The patient's brother is still financially dependent on their parents, which the patient is consciously trying to avoid for herself.",
+    "helpless_belief": [
+      "I am incompetent.",
+      "I am helpless.",
+      "I am needy.",
+      "I am a failure, loser."
+    ],
+    "unlovable_belief": [],
+    "worthless_belief": [],
+    "intermediate_belief": "I must do everything independently to prove that I am a capable adult and to avoid being a burden or like my brother.",
+    "intermediate_belief_depression": "I have failed at independence and self-sufficiency, and I need to ask for help which makes me feel incompetent.",
+    "coping_strategies": "The patient attempts to handle situations independently without relying on others, particularly parents. The patient also aims to budget and handle finances alone, which is a form of asserting control and self-reliance.",
+    "situation": "Receiving an insurance claim with an unexpected balance.",
+    "auto_thought": "I have failed at managing my finances independently. I should have checked with the insurance company.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "guilty"
+    ],
+    "behavior": "Expressing guilt and concern to the therapist about the payment discrepancy and the potential financial burden. Self criticism.",
+    "cognitive_distortion": "Should Statements, All-or-Nothing Thinking",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "1. Introduce the Situation: Begin the session by discussing the recent insurance claim situation and the feelings of guilt and concern that arose. Explore the client's thoughts surrounding financial management and independence. 2. Identify Cognitive Distortions: Help the client recognize the 'should statements' and 'all-or-nothing thinking' in their automatic thoughts, particularly the belief that they must manage everything independently. 3. Gather Evidence: Use evidence-based questioning to challenge these thoughts. Ask the client to reflect on questions such as: - 'What evidence do you have that you have completely failed at managing your finances?' - 'Have there been instances where you managed your finances successfully?' - 'What would you say to a friend in this situation?' 4. Examine the Beliefs: Discuss the intermediate beliefs about independence and self-sufficiency, exploring the pressure they place on themselves to avoid being seen as incompetent. 5. Reframe the Thoughts: Based on the evidence gathered, work with the client to create a more balanced thought process. For instance, changing 'I should have checked' to 'I can learn from this experience and improve my financial management skills.' 6. Develop Actionable Steps: Encourage the client to consider reaching out for support when needed, emphasizing that asking for help does not equate to failure. Develop a plan for how they can approach financial discussions with family or professionals. 7. Practice and Homework: Assign the client to write down situations where they feel they must manage everything alone and reflect on the evidence for and against these beliefs. Reinforce the idea that independence can coexist with asking for help.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "In-session withdrawal",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Anxious",
+    "resistance_internal_monologue": "I want to talk about this, but what if I can’t handle it? Maybe I should just try to figure it out on my own.",
+    "resistance_rationale": "The client's history of striving for independence and feelings of incompetence suggest a tendency to withdraw when faced with vulnerability. Their anxiety about asking for help and fear of being a burden indicates a beginner level of resistance, as they may struggle internally with ambivalence while not outwardly expressing strong disagreement."
+  },
+  {
+    "name": "Ramona",
+    "id": "8-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The patient has experienced a traumatic incident involving a sexual assault by her partner, Ivan. This has led to a complex dynamic in their relationship, where trust and intimacy are significant issues. The patient has been working through these issues and has seen some improvement in the relationship dynamics, as Ivan has been making efforts to be more considerate and reestablish trust.",
+    "helpless_belief": [
+      "I am powerless, weak, vulnerable.",
+      "I am a victim."
+    ],
+    "unlovable_belief": [
+      "I am bound to be alone."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "If I'm not in control, something bad will happen. I must be vigilant at all times to prevent being hurt again. People close to me may hurt me if I let my guard down. ",
+    "intermediate_belief_depression": "My efforts to rebuild trust may be futile. I might never be able to feel safe or loved again. I am at risk of being hurt even when things seem to be improving.",
+    "coping_strategies": "The patient uses vigilance and control as a coping strategy to ensure her safety and prevent further harm. She also engages in open communication and scheduled conversations with Ivan as a way to cope with trust issues in their relationship.",
+    "situation": "Ivan touching the patient in a way that reminds her of the past assault, triggering fear and uncertainty about his intent.",
+    "auto_thought": "Is he going to hurt me again? Can I trust him not to repeat the past? I will get hurt. I can't trust him.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense"
+    ],
+    "behavior": "Confronting Ivan and discussing the incident, feeling a mix of hope and fear. Passive or aggressive confrontation to Ivan. Not assertive.",
+    "cognitive_distortion": "Fortune Telling, Mind Reading, Catastrophizing",
+    "cbt_technique": "Decatastrophizing",
+    "counseling_plan": "Decatastrophizing Technique\n1. Introduce the Concept: We will start by discussing the situation where Ivan's touch triggered fear and uncertainty. I will explain the Decatastrophizing technique and its purpose in addressing overwhelming fears about the future and assumptions about others' intentions.\n2. Identify Specific Fears: Together, we will pinpoint the specific fears arising from the incident. I will ask you to articulate what you believe might happen in the worst-case scenario (e.g., 'He will hurt me again').\n3. Challenge the Catastrophic Thoughts: I will guide you to examine the likelihood of these catastrophic outcomes actually occurring. We will ask questions like, 'What evidence do you have that Ivan will hurt you again?', 'Has he shown behavior that supports this fear?' and 'What are the chances that things will actually turn out this way?'\n4. Explore Alternatives: Next, we will explore alternative outcomes. I will encourage you to think about what could happen if things go well, such as Ivan continuing to be considerate and rebuilding trust. We’ll discuss the positive changes you've already noticed in your relationship dynamic.\n5. Reality Check: We will create a list of all the evidence supporting both your fears and the possibility of positive outcomes. This will help to create a balanced perspective.\n6. Reframe the Thoughts: Based on our discussion and evidence, we will work together to create a new, more balanced thought. For example, instead of 'I can't trust him,' we might reframe it to 'I have reasons to be cautious, but Ivan has shown he is trying to be better.'\n7. Practice and Apply: I will encourage you to practice using this Decatastrophizing technique whenever you find yourself jumping to negative conclusions about Ivan's intentions or your safety. This practice will help you feel more empowered and reduce anxiety in your interactions with him.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "Criticizing the therapist",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Withdrawn",
+    "resistance_internal_monologue": "I just don't think you understand how hard it is for me to trust anyone right now.",
+    "resistance_rationale": "The client's history of trauma and her current belief that she might never feel safe or loved again suggests a reluctance to fully engage with the therapist. This withdrawal could manifest as subtle criticism of the therapist's understanding, reflecting her internal struggle with vulnerability and trust, which aligns with the beginner level of resistance."
+  },
+  {
+    "name": "Grace",
+    "id": "10-3",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The patient has recently gone through a divorce and is dealing with the associated challenges such as financial struggles, adjusting to single life, and co-parenting. The patient has also experienced a breakdown of several friendships due to the divorce and has a complicated relationship with her parents, which adds to the stress.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am defective."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be abandoned.",
+      "I am bound to be alone."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "If people know the real me or the details of my situation, they will not want to be my friend or support me. I must get support from family and friends.",
+    "intermediate_belief_depression": "People will eventually find out the real me and the details of my situation. I will get abandoned by everybody. ",
+    "coping_strategies": "The patient tries to explain things to a few friends. The patient also attempts strategies like keeping busy and avoidance.",
+    "situation": "Receiving mixed messages and lack of support from her parents regarding the divorce.",
+    "auto_thought": " They don't understand what I'm going through. They're critical and make me anxious about visiting them. Even my parents cannot support me.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Hesitates to communicate with parents, feels defensive and anticipates a difficult conversation with them.",
+    "cognitive_distortion": "Mind Reading, Emotional Reasoning, Catastrophizing",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "1. Introduce the Session: Begin by acknowledging the client's feelings regarding the divorce and the mixed messages from their parents. Emphasize that it's common to feel anxious in such situations. 2. Identify Thoughts: Ask the client to share their automatic thoughts about their parents' lack of support and how this affects their emotions. 3. Challenge Mind Reading: Use evidence-based questioning to explore the assumptions that the parents are critical and unhelpful. Prompt with questions like: 'What specific actions or words from your parents lead you to believe they don't understand?' 4. Explore Emotional Reasoning: Discuss how feelings of anxiety and sadness may not reflect reality. Ask: 'Just because you feel unsupported, does it mean your parents are actually being critical?' 5. Address Catastrophizing: Help the client recognize that thinking everyone will abandon them is a distortion. Use questions like: 'Have there been times when you felt alone and people surprised you with their support?' 6. Develop Counter-Thoughts: Encourage the client to create realistic, balanced statements about their parents' potential support and understanding. 7. Practice Communication: Role-play conversations with the parents to practice expressing feelings and needs clearly, reducing defensiveness. 8. Set Goals: Establish small, achievable goals for communication with parents, ensuring they feel prepared and less anxious about future interactions.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "Interrupting",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Anxious",
+    "resistance_internal_monologue": "I know I should talk about my feelings, but what if they don't understand? Can we just change the topic?",
+    "resistance_rationale": "The client's anxiety about being misunderstood and her tendency to avoid discussing difficult emotions suggest an inclination to interrupt discussions rather than engage fully. Her hesitance in communicating with parents and defensive behaviors indicate a level of internal ambivalence that fits the Beginner resistance level."
+  },
+  {
+    "name": "Ian",
+    "id": "11-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client has a history of feeling isolated and has been dealing with chronic depression since late adolescence. They have experienced frustration with friends and had a recent breakup that preceded a relapse into a depressive episode. The client has a history of taking SSRI and has recently been adjusting their medication regimen to deal with the relapse, which has been a source of additional stress.",
+    "helpless_belief": [
+      "I am incompetent.",
+      "I am helpless.",
+      "I am powerless, weak, vulnerable.",
+      "I am trapped."
+    ],
+    "unlovable_belief": [],
+    "worthless_belief": [],
+    "intermediate_belief": "If I can't manage my own feelings, then I'm failing. I should be able to handle my mental health better.",
+    "intermediate_belief_depression": "When I'm depressed, nothing I do seems to make a difference. It feels like I'll never get better no matter what medication or strategies I try.",
+    "coping_strategies": "Uses distraction techniques like watching TV, reading, and sewing, although these have been less effective lately. ",
+    "situation": "Planned to have a productive weekend sewing and doing some catch up work tasks.",
+    "auto_thought": "I know how to do these things, It shouldn't be this hard. Why can't I even do such simple things?",
+    "emotion": [
+      "angry, mad, irritated, annoyed",
+      "disappointed",
+      "guilty"
+    ],
+    "behavior": "Struggles to concentrate and becomes upset with the inability to perform familiar tasks, ended up watching TV all day.",
+    "cognitive_distortion": "Should Statements, Emotional Reasoning, Overgeneralizing",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "1. Introduce the Concept: Begin by discussing the client's frustration with their inability to be productive and how this connects to their negative thoughts. 2. Identify Automatic Thoughts: Help the client articulate their automatic thought: 'It shouldn't be this hard. Why can't I even do such simple things?' 3. Challenge the Thought: Introduce the Evidence-Based Questioning technique by asking the client to evaluate this thought critically. Questions will include: 'What evidence do you have that it should be easy for you to perform these tasks right now?' and 'What does your experience tell you about managing tasks during depressive episodes?' 4. Gather Evidence: Together, we will explore past instances where the client felt similarly and how their feelings impacted their performance. 5. Reevaluate the Automatic Thought: After discussing evidence, ask the client to re-rate their belief in the thought, considering the new perspective: 'How true does this thought feel now?' 6. Create a Balanced Thought: Collaboratively develop a more compassionate and realistic thought, such as: 'It's okay to have difficult days, and my feelings are valid. I can take small steps when I’m feeling overwhelmed.' 7. Practice: Encourage the client to use this questioning technique when they notice negative thoughts in the future, reinforcing the idea that managing mental health is a process, not a failure.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "In-session withdrawal",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Pessimistic",
+    "resistance_internal_monologue": "I want to get better, but it feels like nothing I do makes a difference. Why am I even trying?",
+    "resistance_rationale": "The client's history of chronic depression and feelings of helplessness indicate a tendency to withdraw when faced with challenges. Their pessimistic belief that nothing seems to improve contributes to a sense of disengagement, reflecting a beginner level of resistance where they struggle internally but do not yet express strong opposition outwardly."
+  },
+  {
+    "name": "Yvette",
+    "id": "13-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "ingratiating"
+    ],
+    "history": "The patient has a significant life event of her aunt passing away without the patient fulfilling her aunt's last request. The patient was also not able to be with her aunt when she passed,  which causes her persistent guilt. The patient was very close to her aunt, seeing her as the mother she wished she had, and her death has left a lasting impact. The patient also has a pattern of taking care of others at her own expense, and struggles with recognizing her own needs and allowing herself to experience fun and enjoyment.",
+    "helpless_belief": [],
+    "unlovable_belief": [],
+    "worthless_belief": [
+      "I am worthless, waste.",
+      "I am immoral.",
+      "I am bad - dangerous, toxic, evil."
+    ],
+    "intermediate_belief": "I am responsible for others and must fulfill others' expectations to validate my purpose in life. If I'm not meeting the needs of others, I'm a worthless person. ",
+    "intermediate_belief_depression": "I'm not meeting others' expectations. When I feel overwhelmed by my responsibilities, I'm a bad person and always hurting others like what I did to my aunt. It's shameful to think of prioritizing my own needs over others.",
+    "coping_strategies": "The patient uses avoidance in confronting her grief and engages in overcommitment to helping others to compliment her inner grief and distress.",
+    "situation": "On the way to watch a movie but got a phone call from a friend seeking emotional support.",
+    "auto_thought": "I need to skip the movie and support my friend, otherwise she would be greatly hurt. But I really want to watch the movie",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "ashamed, embarrassed, humiliated"
+    ],
+    "behavior": "Struggled but finally gave up the movie and talked with her friend for an hour. Feeling disappointed for giving up the movie.",
+    "cognitive_distortion": "Should Statements, Overgeneralizing, Emotional Reasoning",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "Evidence-Based Questioning\n1. Introduce the Concept: Begin the session by exploring the situation where you had to choose between watching a movie and supporting your friend. We will discuss how this has led you to feel guilty and disappointed. I will introduce the Evidence-Based Questioning technique to help examine the validity of your thoughts and beliefs.\n2. Identify the Automatic Thought: We will identify your automatic thought, which is 'I need to skip the movie and support my friend, otherwise she would be greatly hurt.' Together, we will explore the emotional impact this thought has on you.\n3. Challenge the Thought: I will encourage you to question the evidence of this thought. For example, we will ask:\n   - What evidence do you have that your friend would be greatly hurt if you went to the movie?\n   - How often have you been able to support your friend while also taking care of your own needs?\n   - What would you say to a friend in your situation who felt guilty for wanting to enjoy something?\n4. Gather Evidence: As we discuss these questions, we will compile evidence that contradicts the automatic thought. This may include past experiences where prioritizing your own needs did not negatively impact your relationships.\n5. Reassess the Emotion: After challenging the thought, we will evaluate how your feelings have changed. Does the guilt still feel as intense, or has it shifted?\n6. Reframe the Perspective: Based on the evidence gathered, we will work together to create a more balanced thought. For example, 'I can support my friend and still enjoy my own life. Taking care of myself does not make me a bad person.'\n7. Practice and Link to Behavior: To reinforce this new perspective, I will encourage you to practice questioning your thoughts in future situations where you feel guilty for prioritizing your own needs. This will help you develop a more compassionate and balanced view of yourself.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "Sidetracking",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Ashamed",
+    "resistance_internal_monologue": "I really want to talk about my feelings, but I keep thinking about how I'm not doing enough for others.",
+    "resistance_rationale": "The client demonstrates a tendency to prioritize others' needs over her own, which may lead her to sidetrack conversations towards their issues instead of addressing her own emotions. This reflects her internal struggle with feelings of worthlessness and shame about her own needs, indicating a beginner level of resistance as she is still trying to engage but may not fully confront her own issues."
+  },
+  {
+    "name": "Karen",
+    "id": "15-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The patient has a history of feeling underappreciated and unsupported in the workplace. She experiences challenges in her role, faces difficulties in getting her ideas and suggestions accepted, and struggles with coping in an environment that seems to dismiss her expertise and personal needs.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am incompetent.",
+      "I am trapped."
+    ],
+    "unlovable_belief": [],
+    "worthless_belief": [
+      "I am worthless, waste."
+    ],
+    "intermediate_belief": "I must be valued and acknowledged from my colleagues to demonstrate my worth, if not, then I'm a worthless person. I must get support from my workplace, otherwise I'm trapped and helpless.",
+    "intermediate_belief_depression": "My efforts are futile; my work is never good enough and will be criticized; Nobody acknowledges my value, I'm a worthless person.",
+    "coping_strategies": "Avoidance of further commitment and effort towards mentorship goals, procrastination, wish to seek validation or acknowledgment for holding back on extreme action.",
+    "situation": "The colleagues praised the client's coworker for his hard work, and ask the client to help that coworker with technology issues.",
+    "auto_thought": "My input and expertise are always overlooked and not harnessed.",
+    "emotion": [
+      "sad, down, lonely, unhappy",
+      "angry, mad, irritated, annoyed",
+      "disappointed"
+    ],
+    "behavior": "Reluctantly helps colleagues with technology issues and ruminates on being underutilized.",
+    "cognitive_distortion": "Disqualifying the Positive, Labeling, Should Statements",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "Evidence-Based Questioning\n1. Introduce the Technique: We will start the session by discussing the client's feelings of being overlooked and undervalued at work. I will explain the Evidence-Based Questioning technique and how it can help challenge negative thoughts about their worth and contributions.\n2. Identify Automatic Thoughts: Together, we will identify specific automatic thoughts the client has when they feel undervalued, such as 'My input is always overlooked' and 'I am worthless.'\n3. Generate Questions: I will help the client formulate targeted questions to challenge these negative beliefs, such as: \n   - 'What evidence do I have that my contributions are overlooked?' \n   - 'Have there been times when my work was acknowledged?' \n   - 'What feedback have I received that contradicts the idea that I'm worthless?'\n4. Explore Evidence: We will discuss and write down any evidence that supports or contradicts these automatic thoughts. This will include examples of positive feedback or instances where the client made a significant contribution.\n5. Reassess Automatic Thoughts: After examining the evidence, I will ask the client to reassess their automatic thoughts based on the new information. For instance, 'Given this evidence, how valid is the thought that I am worthless?' \n6. Create a Balanced Thought: Based on the reassessment, we will work together to create a more balanced and realistic statement about their worth and contributions, such as: 'While I may not always receive recognition, my expertise is valuable and I have made positive contributions to my team.'\n7. Homework Assignment: For practice, I will assign the client to keep a log of positive feedback and successful contributions they make in the workplace over the next week. This will help reinforce the new balanced thought and challenge the tendency to disqualify positive experiences.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "In-session withdrawal",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Sad",
+    "resistance_internal_monologue": "I just feel like my input doesn’t matter, so what's the point in trying to engage?",
+    "resistance_rationale": "The client's history of feeling undervalued and her automatic thoughts suggest a tendency to withdraw when faced with the potential for further disappointment. Her sadness reflects a lack of motivation to engage in therapy, leading to emotional withdrawal as a coping strategy."
+  },
+  {
+    "name": "Sarah",
+    "id": "17-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "Sarah is in a significant relationship with her partner, Amelia, who has a rigorous schedule due to her clinical-based program, which keeps her busy and away from home for extended hours. Sarah often feels isolated during the week. Even though Sarah is incredibly busy, she feels like she has 'housewife'  duties and takes care of all household tasks. Although she resents it, she has not brought it up to her partner. She has a history of attachment issues, starting from her childhood, where separation from her parents caused her distress. These issues have continued into adulthood, where she has struggled with separation anxiety and strong attachments to people in various contexts, such as summer camp, study abroad programs, and volunteer positions.",
+    "helpless_belief": [
+      "I am powerless, weak, vulnerable.",
+      "I am needy.",
+      "I am trapped."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am undesirable, unwanted.",
+      "I am bound to be abandoned.",
+      "I am bound to be alone."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "I need to keep myself valuable to others and support others, otherwise I will be abandoned. I cannot live alone.",
+    "intermediate_belief_depression": "People will just abandon me no matter how I try. Nobody loves me. I'm just a weak and needy person that cannot be independent.",
+    "coping_strategies": "The client engages in various activities to cope with her feelings of loneliness and anxiety, such as running, cleaning, cooking, and sometimes picking Amelia up to spend more time with her. She tries to do household tasks as much as she can, so that to keep herself valuable to Amelia.",
+    "situation": "Doing the laundry and thinking about the future of her relationship with Amelia and the domestic role she plays.",
+    "auto_thought": "I don't like the role, but this is just what I'm capable of. If i don't do it I will lose Amelia.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Speculating about the relationship dynamic and feel trapped.",
+    "cognitive_distortion": "Should Statements, Emotional Reasoning, Overgeneralizing",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "Evidence-Based Questioning\n1. Introduce the Concept: We will begin by exploring your feelings of being trapped and the belief that you must fulfill the domestic role to maintain your relationship with Amelia. I will explain how these thoughts may be based on assumptions rather than evidence.\n2. Identify Automatic Thoughts: I will ask you to share specific thoughts that arise when you feel you must take on these household duties. We'll write them down to visualize the patterns.\n3. Challenge the Thoughts: For each automatic thought, we will apply evidence-based questioning. For example, if you say, 'If I don't do this, Amelia will leave me,' we will ask:\n   - What evidence do you have that supports this thought?\n   - What evidence contradicts it?\n   - Have there been times when you didn’t do these tasks and still felt loved or valued?\n4. Explore Underlying Beliefs: We will dig deeper into the beliefs that support your automatic thoughts, such as 'I must be indispensable to be loved.' I will guide you to reflect on where these beliefs originated and how they may not be true.\n5. Generate Alternative Thoughts: Based on the evidence we discuss, we will work together to create alternative thoughts that are more balanced and realistic. For example, 'Amelia values me for who I am, not just for what I do.'\n6. Practice Reframing: We will practice reframing your thoughts in real-life scenarios where you feel pressured to take on the domestic role. I will encourage you to use these alternative thoughts to challenge the initial feelings of anxiety and worthlessness.\n7. Develop an Action Plan: Finally, we will create a plan for you to communicate your feelings to Amelia and express the need for a more balanced approach to household responsibilities. We will also identify coping strategies for managing feelings of anxiety and loneliness when Amelia is busy.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "Interrupting",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Anxious",
+    "resistance_internal_monologue": "I don't want to discuss how I feel about doing all the chores, but I feel like if I bring it up, Amelia might get upset.",
+    "resistance_rationale": "Sarah's feelings of anxiety regarding her role in the relationship and fear of abandonment suggest she may feel hesitant to express her true feelings. This aligns with a beginner level of resistance, where her internal conflict is present but not overtly expressed. Her tendency to focus on her partner's needs over her own adds to this resistance, leading her to interrupt discussions that might lead to uncomfortable feelings."
+  },
+  {
+    "name": "Rachel",
+    "id": "19-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The patient, named Rachel, has a history of relationship problems, including with her current husband, Ivan, and work-related stress. She has demonstrated a pattern of self-critical thoughts, particularly around her value in relationships and her professional achievements. She also appears to feel a significant burden of responsibility, as shown in the dynamics with her sister, Emma, who has typically assumed a caring role for Rachel. Her father's successful career and work ethic have shaped her expectations and self-view, and she often feels Ivan doesn't work hard enough. She was also recently laid off and is having a hard time finding a new job.",
+    "helpless_belief": [
+      "I am incompetent.",
+      "I am helpless.",
+      "I am a failure, loser."
+    ],
+    "unlovable_belief": [],
+    "worthless_belief": [],
+    "intermediate_belief": "Being ambitious and successful in career is crucial components of a fulfilling life. If one is not successful in career or not ambitious enough, he's a failure.",
+    "intermediate_belief_depression": "My efforts towards job seeking are futile, I cannot be successful in my career, so I'm a failure. ",
+    "coping_strategies": "The coping strategies Rachel mentions include volunteering for roles related to her field of interest, applying for jobs, seeking therapy, and possibly socializing with her sister. However, she also displays unhealthy coping mechanisms such as self-criticism and emotional reasoning.",
+    "situation": "Dealing with the job-seeking process and getting a rejection email.",
+    "auto_thought": "I'm never going to find a job, I'm failing in my job search, it's all pointless.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Decreased motivation to continue job search, feeling overwhelmed and hopeless.",
+    "cognitive_distortion": "Fortune Telling, Catastrophizing, Should Statements",
+    "cbt_technique": "Decatastrophizing",
+    "counseling_plan": "Decatastrophizing Technique\n1. Introduce the Concept and Identify the Situation: We'll start by discussing the recent job search experience and the rejection email that triggered your feelings of hopelessness. We'll identify how these thoughts have led you to predict a negative outcome (Fortune Telling) and view the situation as entirely hopeless (Catastrophizing).\n2. Challenge the Catastrophic Thought: I'll ask you to articulate your worst-case scenario regarding the job search. What do you believe will happen if you don't find a job soon? We'll write this down to visualize the thought.\n3. Assess the Likelihood: Next, we will evaluate the likelihood of this worst-case scenario happening. I will guide you with questions like, 'What evidence do you have that this will definitely happen?' and 'Have there been times in the past when you expected the worst but things turned out differently?'\n4. Explore Alternatives: We will brainstorm and discuss other possible outcomes that are less extreme than your worst-case scenario. I will encourage you to think of a range of potential outcomes, from positive to neutral, and we will list these together.\n5. Reframe the Thought: After establishing a more balanced view of the situation, we will work on reframing your original thought. For example, instead of thinking 'I'm never going to find a job,' we might shift to 'Finding a job can be challenging, but I have skills and experiences that are valuable, and I can keep trying.'\n6. Create an Action Plan: We will outline practical steps you can take moving forward to continue your job search and reduce feelings of helplessness. This may include setting daily or weekly goals, reaching out to connections, or exploring new career paths.\n7. Practice and Link to Behavior: The goal will be to help you use the Decatastrophizing technique whenever you find yourself predicting negative outcomes. Your task will be to apply this method in your daily reflections or journaling to reinforce a more balanced perspective.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "Sidetracking",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Ambivalent",
+    "resistance_internal_monologue": "I want to focus on my job search, but talking about my feelings seems easier right now.",
+    "resistance_rationale": "Rachel exhibits ambivalence towards the treatment, showing a desire to engage with her job search but often diverting the conversation to her feelings of inadequacy and hopelessness. This sidetracking reflects her internal struggle between wanting to address her job search issues and the overwhelming emotions that accompany them, indicating a beginner level of resistance."
+  },
+  {
+    "name": "Talia",
+    "id": "21-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The patient has a significant history of family conflict, particularly with her father who was described as cruel, dismissive, and unsupportive. The patient's relationship with her father has deteriorated to the point of estrangement, and similar themes of familial conflict are reflected in her experiences with her partner's family. The patient reports feeling unsupported and mistreated by her partner's sister-in-law, Candace, which appears to be causing a significant amount of stress and frustration. The pressure to conform to the expectations of her partner's family and to tolerate Candace's behavior without recourse is reminiscent of her history with her own family and her inability to effectively confront or manage these familial relationships.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am powerless, weak, vulnerable.",
+      "I am trapped."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am undesirable, unwanted.",
+      "I am bound to be abandoned."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "I must maintain peace and accept family members as they are, even if they treat me poorly. If I have conflicts with family members, I cannot win them, and it will only make everybody abandon me, or make the whole family torn apart.",
+    "intermediate_belief_depression": "If I stand up for myself, it will only make situations worse and I will be the one causing drama within the family. I'm powerless in this family and they will not support me. But I'm getting more and more upset by being offended by Candace. I don't know what to do. I'm just a weak person and trapped.",
+    "coping_strategies": "Avoiding confrontation with family members, withdrawing from situations that may lead to conflict, considering reducing time spent with the family or specific family members, looking for support from friends.",
+    "situation": "Thinking about family vacation in Maine and interacting with Candace.",
+    "auto_thought": "Candace will treat me poorly, and I won't be able to stand up for myself without disrupting the family dynamic.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Feels anxious about upcoming family events, procrastinates on work, loses sleep.",
+    "cognitive_distortion": "Mind Reading, Catastrophizing, Should Statements",
+    "cbt_technique": "Decatastrophizing",
+    "counseling_plan": "Decatastrophizing Technique\n1. Introduce the Concept: We will start by discussing your thoughts around upcoming family events and your expectations about Candace's behavior. I will introduce the Decatastrophizing technique to help you challenge the extreme negative predictions you have made.\n2. Identify Catastrophic Thoughts: Together, we will list the specific thoughts causing you anxiety, such as 'Candace will treat me poorly' and 'I won't be able to stand up for myself'.\n3. Explore the Evidence: We will examine the evidence supporting these thoughts. I will ask you questions like, 'What past experiences have you had with Candace that support this belief?' and 'Have there been times when your predictions about family interactions did not come true?'\n4. Challenge the Catastrophic Outcomes: For each catastrophic thought, we will explore the worst-case scenario you envision and ask, 'What is the likelihood of this happening?' and 'How would you cope if it did happen?'\n5. Generate Alternative Outcomes: We will create a list of more balanced, realistic outcomes that could occur instead of the worst-case scenarios you've been focusing on.\n6. Reframe Your Thoughts: Based on the exploration, we will work together to reframe your automatic thoughts into more constructive and balanced statements, such as 'While Candace may not be supportive, I can still stand up for myself and set boundaries.'\n7. Develop an Action Plan: I will assist you in creating a plan for how to approach the upcoming family event, including strategies for managing interactions with Candace. We can role-play potential conversations to increase your confidence.\n8. Practice the Technique: We will conclude by discussing how you can use the Decatastrophizing technique in real-life situations and encourage you to keep a thought journal to track your feelings and the outcomes of family interactions. This will help reinforce the new, balanced perspectives we develop in our sessions.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "In-session withdrawal",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Anxious",
+    "resistance_internal_monologue": "I really want to express how I feel about Candace, but what if it just makes everything worse? I think I should just keep quiet.",
+    "resistance_rationale": "The client exhibits a pattern of avoiding confrontation and expressing feelings of powerlessness, particularly in familial contexts. Her anxiety about standing up for herself and the fear of causing drama indicate a tendency toward withdrawal in sessions, suggesting a beginner level of resistance as she grapples with her emotions but does not yet fully articulate or confront them."
+  },
+  {
+    "name": "Ashley",
+    "id": "23-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The patient has experienced ongoing interactions with her mother that are stressful and controlling, leading to feelings of passivity and helplessness. The reported family dynamic, particularly the communication style and delayed sharing of significant events, adds to this stress. Also, the patient's emotional responses and behavior during her parents' visit suggest a history of such dynamics affecting them over time.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am powerless, weak, vulnerable.",
+      "I am trapped.",
+      "I am out of control."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be abandoned."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "My feelings and needs are secondary or less valid than others', I must manage situations to avoid conflict or to maintain peace with my parents. It is safer not to express myself and my emotions, otherwise I will be abandoned. I don't have the power and strength to stand up for myself.",
+    "intermediate_belief_depression": "My feelings and needs are never seen or supported by my parents. I'm powerless and weak when confronting my parents. it is inevitable that interacting with my family will leave me feeling miserable and invalidated. But if I just keep detached and numb, my emotions will be too overwhelming once they burst out. I'm gradually losing control of myself and can't control my emotions. I don't know what to do and trapped.",
+    "coping_strategies": "The patient uses avoidance (declining invitations from friends, not wanting to talk to parents about her actual feelings) and emotional numbing (feeling 'out of it' and 'zoning out') as ways to cope with the stress and unhappiness related to family interactions. They also seem to employ distraction and passive acceptance of the situation.",
+    "situation": "Planning for parents' visit and navigating her presence.",
+    "auto_thought": "No matter what I do, my needs and wishes are ignored or overruled.",
+    "emotion": [
+      "sad, down, lonely, unhappy",
+      "hurt"
+    ],
+    "behavior": "Becomes passively involved in the visit, avoids direct confrontation and communications. Trying to suppress feelings.",
+    "cognitive_distortion": "Personalizing, Emotional Reasoning, Catastrophizing",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "1. Introduce the Concept: We will start by discussing your feelings about your parents' visit and how it leads to the belief that your needs are ignored. We'll identify how you personalize their actions and catastrophize the outcome of expressing your feelings. 2. Identify Specific Thoughts: I will ask you to share specific instances from past interactions with your parents where you felt your needs were disregarded. We will pinpoint the thoughts associated with those feelings. 3. Gather Evidence: For each instance, we will analyze the situation using evidence-based questioning. I will prompt you with questions like: 'What evidence do you have that your feelings were completely ignored?' and 'Have there been times when your needs were acknowledged?' We will aim to find objective evidence to counter the belief that your feelings are not valid. 4. Challenge Negative Conclusions: Together, we will discuss the conclusions you've drawn from these experiences. I will encourage you to consider alternative explanations for your parents' behaviors and the outcomes of your interactions. 5. Reframe the Thoughts: Based on the evidence we gather, we will work on reframing your automatic thoughts. Instead of thinking 'No matter what I do, my needs are ignored,' we might create a more balanced thought such as 'I have expressed my needs before, and while they may not always be fully acknowledged, it doesn't mean they are invalid.' 6. Develop Coping Strategies: We will then explore new coping strategies for managing emotions during family interactions. This might include practicing assertive communication or developing a plan for expressing your needs calmly during the visit. 7. Practice and Review: Finally, we will set a plan for practicing these new skills during your parents' visit. After the visit, we will review how it went and what you learned about standing up for yourself and recognizing your needs.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "Interrupting",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Sad",
+    "resistance_internal_monologue": "I want to express how I feel, but what’s the point? They won’t listen anyway.",
+    "resistance_rationale": "The client's history of feeling unheard and invalidated by her parents suggests a tendency to withdraw emotionally. However, she also exhibits avoidance behaviors, indicating a conflict between wanting to express her feelings and fearing rejection or abandonment, leading to subtle interruptions during discussions that reflect her internal struggle."
+  },
+  {
+    "name": "Evan",
+    "id": "24-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded"
+    ],
+    "history": "The patient has a history of experiencing feelings of inadequacy, performance pressure, and social disappointment. He recalls past instances where he tried to put on a performance to meet others' expectations and hide his vulnerability. He recently encountered an incident that caused one of his businesses to fail, which resulted in financial difficulty.",
+    "helpless_belief": [
+      "I am incompetent.",
+      "I am helpless.",
+      "I am powerless, weak, vulnerable.",
+      "I am a failure, loser."
+    ],
+    "unlovable_belief": [
+      "I am undesirable, unwanted.",
+      "I am bound to be abandoned."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "I must meet others' expectations. Expressing weaknesses or asking for help is frowned upon and not beneficial. I need to have a facade of control or a performance to be accepted or to interact socially. Discussing problems is pointless and signs of weakness must be hidden, otherwise nobody likes me and I will be abandoned.",
+    "intermediate_belief_depression": "If I'm failing to meet expectations, or showing my vulnerability and weakeness, people will know I'm just a weak person and a failure. I will eventually be unwanted and abandoned.",
+    "coping_strategies": "The patient uses avoidance (e.g., not attending gatherings), suppression of emotions, and intellectualization as coping methods. He also engages in counterproductive self-talk, pseudo-performances in social interactions, and rationalization to avoid showing vulnerability. He also uses grandiosity and masculinity to cover up his insecurities.",
+    "situation": "Took out a loan instead of asking family or friends for help.",
+    "auto_thought": "I can't let anyone know I'm struggling financially because they'll lose respect for me.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "ashamed, embarrassed, humiliated"
+    ],
+    "behavior": "Brags to his business acquaintances about a crazy weekend in Las Vegas and how much money he spent, which was a lie and didn't actually happen; in order to cover up his anxiety and insecurity.",
+    "cognitive_distortion": "Should Statements, Mind Reading, Emotional Reasoning",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "Evidence-Based Questioning\n1. Introduce the Concept and Identify the Target: We will start by discussing your recent decision to take out a loan instead of seeking help from family or friends. We will explore the 'should statements' you hold about needing to appear strong or competent, and how these thoughts might be contributing to your anxiety.\n2. Identify Automatic Thoughts: Together, we will identify specific automatic thoughts that arise when you consider asking for help or being vulnerable. For example, thoughts like 'I can't let anyone know I'm struggling financially' will be highlighted.\n3. Gather Evidence: I will guide you in questioning the validity of these thoughts. We will explore questions such as: \n   - 'What evidence do you have that your friends or family would lose respect for you if they knew you were struggling?' \n   - 'Have you ever experienced a time when being vulnerable actually strengthened your relationships?' \n4. Challenge Cognitive Distortions: We will look for counter-evidence to your automatic thoughts. I will encourage you to consider alternative perspectives on vulnerability and the potential support available from loved ones.\n5. Reassess the Situation: After gathering evidence, we will reassess your initial beliefs about asking for help. I will ask you to rate your emotional response to these thoughts before and after this process.\n6. Create a Reframed Thought: Based on our discussion, we will work together to create a more balanced and compassionate thought. For example, instead of thinking 'I can't let anyone know I'm struggling,' we might reframe it to 'Asking for help is a sign of strength and can help me feel supported.'\n7. Encourage Practice: The final step will involve encouraging you to practice these new thought patterns in real-life situations. You may set a goal to reach out to a family member or friend for support, and we will discuss how to prepare for that conversation.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "In-session withdrawal",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Withdrawn",
+    "resistance_internal_monologue": "I know I should be more open about my struggles, but what if they think less of me?",
+    "resistance_rationale": "The client exhibits patterns of emotional withdrawal and avoidance due to deep-seated fears of vulnerability and inadequacy. Their history of feeling compelled to maintain a facade and suppress emotions suggests a tendency to disengage in therapy when discussions become personally challenging."
+  },
+  {
+    "name": "Zac",
+    "id": "25-3",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded"
+    ],
+    "history": "The patient works in an educational setting with children with learning disabilities. The patient has had a history of being babied by his parents, facing little punishment or consequences for his actions, leading to conflicts with authority and frustration when things don't go his way. He has been frustrated by the difference between his expectations and reality both in his job and personal life.",
+    "helpless_belief": [
+      "I am incompetent.",
+      "I am powerless, weak, vulnerable.",
+      "I am a failure, loser."
+    ],
+    "unlovable_belief": [],
+    "worthless_belief": [],
+    "intermediate_belief": "My efforts must have desired impact. I must have authority and influence, otherwise I'm a failure. The changes I make must proceed smoothly.",
+    "intermediate_belief_depression": "My efforts in both work and life are unproductive and futile, I'm powerless and ineffective in everything. I'm a failure.",
+    "coping_strategies": "The patient tends to become frustrated and angry, yet internally conceals these feelings. He uses verbal self-expression to relieve frustration and are aware of his tendency to erupt like a 'volcano' and talk to himself as a form of coping.",
+    "situation": "Talked to a friend about recent frustrations, and the friend mentioned his tendency of controlling behavior.",
+    "auto_thought": "Even my friend thinks I'm a failure. And he even thinks I'm a 'giant baby'. How offensive!",
+    "emotion": [
+      "sad, down, lonely, unhappy",
+      "angry, mad, irritated, annoyed",
+      "hurt"
+    ],
+    "behavior": "Decided that this friend was no longer a good friend. Acts cold towards the friend, intentionally ignores texts from this friend and purposefully doesn't invite them to a group gathering.",
+    "cognitive_distortion": "Overgeneralizing, Labeling, Catastrophizing",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "1. Introduce the Concept: We will start by discussing the recent conversation with your friend and how it has impacted your feelings about yourself. We'll highlight the tendency to overgeneralize from his comment to a broader judgment about your worth and abilities. 2. Identify Specific Thoughts: I will ask you to articulate the exact thoughts you had after the conversation, particularly focusing on the labeling (e.g., calling yourself a 'failure' or a 'giant baby'). 3. Gather Evidence: Together, we will explore evidence for and against these thoughts. I will prompt you with questions such as: - What specific actions or accomplishments contradict the label of 'failure'? - Are there times when you felt competent and effective, both at work and in personal relationships? 4. Challenge the Label: We will focus on the label you've assigned to yourself and the emotions tied to it. I will encourage you to consider alternative labels that may be more accurate and less damaging. 5. Create a Balanced Perspective: After discussing the evidence, we will work on reframing your thoughts. For example, instead of saying, 'I'm a giant baby,' you might say, 'I have moments of vulnerability, which is a part of being human.' 6. Practice Reframing: I will give you exercises to practice reframing negative thoughts in everyday situations. For example, when you feel a strong emotional reaction, take a moment to identify the thought and challenge it using the evidence we discussed. 7. Link to Behavior: Finally, we will connect this new way of thinking to your behavior. I will encourage you to reach out to your friend again and express your feelings, rather than withdrawing. This will help reinforce the idea that vulnerability is not a weakness, but a strength.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "Interrupting",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Sad",
+    "resistance_internal_monologue": "I want to say something about how I feel, but I can’t help but think it’s pointless to even try.",
+    "resistance_rationale": "The client's internal feelings of sadness and frustration about their perceived failures and powerlessness lead to a tendency to interrupt or redirect conversations rather than fully engage. Their coping strategies involve verbal self-expression, but they often conceal deeper emotions, indicating a level of ambivalence about sharing their thoughts in therapy. This fits the Beginner level as their resistance is more about internal doubts than overt confrontation."
+  },
+  {
+    "name": "Sophia",
+    "id": "28-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "Sophia has a history of being critical towards herself, a behavior that likely stems from her upbringing. She was accustomed to having control in life and achieving her goals, making the current situation with job searching, her relationship with Ivan, and family dynamics challenging for her.",
+    "helpless_belief": [
+      "I am incompetent.",
+      "I am powerless, weak, vulnerable.",
+      "I am a failure, loser."
+    ],
+    "unlovable_belief": [],
+    "worthless_belief": [],
+    "intermediate_belief": "I must excel in everything, otherwise I'm a failure. Not knowing my exact career path or future is unacceptable. \n[during depression]\n I am not doing enough. No matter the effort, outcomes are not satisfying. If unable to forecast positive outcomes, efforts are wasted.",
+    "intermediate_belief_depression": "",
+    "coping_strategies": "Self-criticism as a form of maintaining control, and possibly obsessive over-preparation as an attempt to mitigate future disappointments.",
+    "situation": "Not receiving tangible job offers despite efforts in job searching.",
+    "auto_thought": "I'll never get a job; my efforts are yielding no results, making me a failure.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Continuing to search for jobs, over-preparing but feeling hopeless and critical of the outcomes. Cuts out social activities and hobbies to focus all her efforts onto the job search.",
+    "cognitive_distortion": "Overgeneralizing, Catastrophizing, Should Statements",
+    "cbt_technique": "Decatastrophizing",
+    "counseling_plan": "1. Introduce the Concept and Identify the Target: We will begin by discussing your job search experiences and the feelings of hopelessness that arise when you think you’ll never get a job. I will introduce the Decatastrophizing technique to help challenge the extreme beliefs about your situation.\n2. Understand Catastrophic Thoughts: Together, we will identify specific catastrophic thoughts you have about not getting a job, such as 'If I don't get a job, I am a failure.' We will write these down to clarify the intensity of these beliefs.\n3. Examine the Evidence: Next, I will guide you to consider the evidence for and against these catastrophic thoughts. We will ask questions like: 'Have there been times in the past where you were unsuccessful but eventually found success?' and 'What skills do you possess that are valuable to employers?' \n4. Challenge the Thoughts: I will help you to reframe these thoughts by discussing the likelihood of the worst-case scenarios occurring. We will explore how failure in the job search doesn't define your entire worth or future.\n5. Consider Alternative Outcomes: We will brainstorm potential positive outcomes of your job search that you may not have considered, including the skills and experiences you are gaining through the process.\n6. Create a Balanced Perspective: Using the evidence gathered, we will work on creating a more balanced thought, such as 'While it’s frustrating not to receive offers right now, it doesn't mean I’m a failure. My efforts are valuable and I can continue to improve.'\n7. Develop Coping Strategies: Finally, we will establish practical coping strategies for managing feelings of anxiety and hopelessness during the job search, including setting realistic daily goals and allowing time for social activities to maintain balance in your life.",
+    "resistance_type": "Direct",
+    "resistance_subtype": "Explicitly disagreeing with the treatment rationale",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Pessimistic",
+    "resistance_internal_monologue": "I don't really see the point of this approach. It feels like no matter what I do, it's just not going to work out.",
+    "resistance_rationale": "Sophia's history of self-criticism and her belief that she must excel may lead her to doubt the effectiveness of therapy methods that don't align with her expectations of immediate results. Her feelings of helplessness and powerlessness contribute to her reluctance to fully engage with the treatment rationale, indicating a beginning level of resistance."
+  },
+  {
+    "name": "Matthew",
+    "id": "30-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client is transitioning to a better job position and has just completed their degree. Coming out to their parents only two and a half to three years ago, their sexuality was a significant surprise to the parents, and coming out was met with negative reactions and felt like they had to protect themself during the process. The client moved to New York for school, which was also an excuse to discover their identity away from the influence of their family. There are strained family relationships, especially with their mother who seems to focus on the practical repercussions of life events rather than emotional support, and with their sister, who remains unfocused, living at home and seemingly jealous of their independence and achievements.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am powerless, weak, vulnerable."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be rejected."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "My family will not understand or support me emotionally. Achieving independence is necessary for self-discovery, but it leads to estrangement from family. \n[during depression]\n When faced with challenges or personal issues, my family will likely not offer the emotional support I need. I am not independent. ",
+    "intermediate_belief_depression": "",
+    "coping_strategies": "The client seeks approval and acceptance from their family but often has to emotionally distance themselves to maintain their well-being. Humor and minimizing the emotional impact of situations are used as defense mechanisms.",
+    "situation": "Thinking about telling their parents about a breakup",
+    "auto_thought": "They never care about how I am feeling. They would just assume this is another evidence of the failure of my self-discovery.",
+    "emotion": [
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Having conflicting thoughts about whether to tell them or not. Ruminating on the negative reaction of their parents to their coming out and expecting a similar reaction.",
+    "cognitive_distortion": "Mind Reading, Fortune Telling, Emotional Reasoning",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "1. Introduce the Concept: We will start by discussing your concerns about telling your parents about the breakup and the assumptions you have about their potential reactions. I will explain how these thoughts can be categorized as Mind Reading and Fortune Telling, which can lead to unnecessary anxiety. \n2. Identify Automatic Thoughts: Together, we will explore the specific thoughts you have regarding your parents' likely responses, such as 'They will just assume this is another evidence of the failure of my self-discovery.' \n3. Challenge the Assumptions: I will guide you to examine the evidence for and against these assumptions. We'll ask questions like: 'What specific evidence do you have that your parents will react negatively?' and 'Have they ever expressed care or concern about your feelings in the past?' \n4. Generate Alternatives: After discussing the evidence, we will brainstorm potential alternative responses your parents might have. This will help you realize that there are multiple possible outcomes to the conversation. \n5. Assess Emotional Impact: I will ask you how these alternative thoughts make you feel compared to your initial thoughts. This step is crucial for understanding the emotional reasoning behind your fears. \n6. Role-Playing: To help prepare you for the conversation, we will role-play how the discussion might go. You can practice expressing your feelings and concerns, and I will simulate potential responses from your parents based on the new perspectives we've discussed. \n7. Create a Support Plan: Finally, we will develop a plan for how to seek emotional support regardless of how the conversation goes. This could include identifying friends or support groups to turn to if the conversation doesn't go as hoped. \n8. Closing: We will conclude the session by summarizing what you've learned and discussing the importance of challenging cognitive distortions in real-life situations.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "In-session withdrawal",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Sad",
+    "resistance_internal_monologue": "I want to talk about how my breakup affected me, but I just feel so lost and alone. Maybe I shouldn't bother.",
+    "resistance_rationale": "The client's history of strained family relationships and their struggle with feelings of helplessness and unlovability suggest a tendency to withdraw in emotionally charged situations. Their coping strategy of emotionally distancing themselves indicates a beginner level of resistance, characterized by internal ambivalence and a reluctance to engage deeply in the therapeutic process."
+  },
+  {
+    "name": "Logan",
+    "id": "33-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded"
+    ],
+    "history": "The client shares a history of complicated romantic relationships. His most recent involvement is with a woman named Cleo, who is giving mixed signals towards the client. Cleo is already in a long-distance relationship, but is also seeing the client on the side. The client feels Cleo is emotionally maanipulative, but also is not willing to end thir relationship. The client has encountered similar situations before, reflecting a pattern in his relationships.",
+    "helpless_belief": [
+      "I am trapped."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be abandoned.",
+      "I am bound to be alone."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "I must support other's emotional needs to get love from them. \n[during depression]\n I'm just a tool for others' emotional convenience without getting a fair exchange. Everybody is using me as emotional crutch, and will eventually abandon me after the usage.",
+    "intermediate_belief_depression": "",
+    "coping_strategies": "The client expresses a tendency to control emotional exposure and not being 'drawn in' to avoid hurt. He also rationalize his supports as being generous.",
+    "situation": "On an outing with Cleo, she recounts problems with her ex as well as problems with her current long-distance boyfriend, and expects his listening support.",
+    "auto_thought": "She's just using me as an emotional crutch, and I'm getting nothing in return.",
+    "emotion": [
+      "sad, down, lonely, unhappy",
+      "angry, mad, irritated, annoyed",
+      "hurt"
+    ],
+    "behavior": "Ignores Cleo for a few days, but eventually gives in to her texts and invitations to go out again; secretly enjoyed her pursuing him.",
+    "cognitive_distortion": "Emotional Reasoning, Overgeneralizing, Should Statements",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "Evidence-Based Questioning\n1. Introduce the Concept: We will begin the session by discussing your feelings of being used and unlovable in your relationship with Cleo. I will explain the concept of emotional reasoning and how it can lead to distorted beliefs about oneself. \n2. Identify Specific Thoughts: I will ask you to share the specific thoughts that led you to feel that you are just an emotional crutch for others. We'll focus on the auto thought: 'She's just using me as an emotional crutch, and I'm getting nothing in return.' \n3. Gather Evidence: Next, I will guide you in examining the evidence for and against this thought. I will prompt you with questions such as: 'What specific actions has Cleo taken that lead you to feel used? Have there been moments where she has shown care or appreciation for you?' \n4. Challenge the Evidence: We will then explore alternative interpretations of Cleo's behavior. Questions like: 'Could her actions be interpreted differently? What might be another reason for her behavior besides using you?' will help in this process. \n5. Reassess the Thought: After gathering evidence, I will encourage you to reassess the initial thought. We will discuss where you might rank your feelings of being used on a scale from 0 (not true) to 100 (completely true). \n6. Develop a Balanced Perspective: Based on the evidence we've discussed, we will work together to create a balanced thought that reflects a more accurate view of your relationship with Cleo. For example, a statement like: 'While I may feel that I am being used at times, there are also moments when Cleo is supportive and caring.' \n7. Practice: Finally, I'll encourage you to apply this questioning technique in future situations, especially when you feel overwhelmed by negative emotions. By practicing this, you can begin to develop a more balanced view of your relationships and reduce the feelings of unworthiness.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "In-session withdrawal",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Sad",
+    "resistance_internal_monologue": "I want to be supportive, but I feel so drained and unappreciated right now.",
+    "resistance_rationale": "The client's history of feeling emotionally manipulated and unappreciated in relationships contributes to their tendency to withdraw in therapy. Their sadness reflects their struggle with feeling used and not valued, which may cause them to disengage during sessions, especially when discussing emotionally heavy topics."
+  },
+  {
+    "name": "Taylor",
+    "id": "34-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client's brother died by suicide as a teenager, which has strongly and negatively impacted the family. The client described frequently challenging their mom about why their family never wants to discuss the pain and suffering they've gone through because of the suicide. The client also recounts their parents' reluctance to let the client engage in talk therapy after the brother's death, despite experiencing recurring and disturbing dreams related to the suicide. As an adult now, the client reports still struggling with feelings of separation and suffering, and lack coping skills to regulate their emotions.",
+    "helpless_belief": [
+      "I am powerless, weak, vulnerable.",
+      "I am trapped.",
+      "I am defective."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be rejected."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "I am sensitive and weak because I am still not over my brother's death; I keep bringing down everyone's mood because I am the only one who is still not able to cope with my brother's death. \n[during depression]\n I need to control myself and my emotions; if I feel all my emotions, I will break down and never recover from it.",
+    "intermediate_belief_depression": "",
+    "coping_strategies": "Reading psychological books (e.g. Carl Rogers's book) to gain insight and perspective; attempts to rationalize every negative situation to prevent getting emotional; represses emotions",
+    "situation": "Looking at the calendar and realising it is their brother's birthday soon.",
+    "auto_thought": "My family has not equipped me to understand or process my suffering adequately.",
+    "emotion": [
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Ignores their feelings and carries on with their work day as usual.",
+    "cognitive_distortion": "Emotional Reasoning",
+    "cbt_technique": "Decatastrophizing",
+    "counseling_plan": "Decatastrophizing Technique\n1. Introduce the Concept: We will start the session by discussing the significance of your brother's upcoming birthday and how this brings up intense feelings of sadness and emotional distress. I will explain the concept of emotional reasoning and how it leads you to conclude that feeling sad means you are weak or that you have not coped well with your brother's death.\n2. Identify Distorted Thoughts: Together, we will identify the specific thoughts that arise when you feel these emotions, such as 'I am weak for still being affected by my brother's death' or 'I am ruining family gatherings by being sad.'\n3. Challenge the Thoughts: I will guide you to question these thoughts by exploring the evidence against them. We will ask questions such as: 'Has feeling sad ever made you a weak person?' and 'Can sadness coexist with strength and resilience?' This will help you see that emotions do not define your worth or strength.\n4. Explore Alternative Perspectives: We will work to identify alternative ways of viewing your emotions. For example, feeling sad about your brother's death can be seen as a testament to the love you have for him and a natural response to loss, rather than a sign of weakness.\n5. Reframe Emotional Reactions: I will help you create a new narrative about your emotional responses. Instead of thinking 'I am weak for feeling this way,' we will reframe it to 'I am human, and it is okay to feel sad about my brother's death; it shows my capacity to love and remember him.'\n6. Develop Coping Strategies: We will discuss practical ways to manage these emotions when they arise, such as journaling about your feelings or finding a supportive friend or family member to talk to. We will also explore grounding techniques to help you stay present and reduce overwhelming emotions.\n7. Practice and Follow-Up: Finally, we will set a plan for you to practice these reframing techniques in the coming weeks, particularly around significant dates like your brother's birthday. We will schedule a follow-up session to discuss your experiences and any challenges you faced in implementing this new perspective.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "In-session withdrawal",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Sad",
+    "resistance_internal_monologue": "I really want to talk about how I feel, but I'm scared it will just make everything worse.",
+    "resistance_rationale": "The client's history of trauma and their beliefs about being defective and unlovable contribute to their tendency to withdraw emotionally in therapy. Their struggle to process grief and fear of feeling overwhelmed suggests a beginner level of resistance, where they may internally grapple with their feelings but not express clear pushback against therapy."
+  },
+  {
+    "name": "Naomi",
+    "id": "38-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client expressed concerns about returning to work after a period of physical therapy for a painful condition. They have a history of feeling judged by personnel at work, experience dread and nervousness about interacting with HR and their manager regarding their return to work and their short-term disability status, and feel guilty for being away from work despite medical reasons.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am trapped.",
+      "I am out of control."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be alone."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "I need to control my situation but can't, If I don't go back to work soon, others will view me negatively, Taking care of my health might make others judge me.",
+    "intermediate_belief_depression": "I'm failing at knowing what to do to continue being out of work, I should be more proactive, If I enjoy time away from work, it means I'm lazy and taking advantage of the system.",
+    "coping_strategies": "Seeking confirmation from others about taking more time off from work, attempting to find clear instructions from HR policies online, wanting to argue against supportive comments as a means of judging self-necessity.",
+    "situation": "Running into a coworker while not being at work due to illness.",
+    "auto_thought": "They're going to think I'm not really sick, I feel guilty for being out of the office.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "guilty"
+    ],
+    "behavior": "Feeling nervous and stressed, excessive worry about others' perceptions even when legitimately unwell.",
+    "cognitive_distortion": "Mind Reading, Should Statements, Emotional Reasoning",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "1. Introduce the Concept: We will start by discussing the recent encounter with your coworker while you were out sick. I will help you identify the mind reading and emotional reasoning involved in believing others think poorly of you for being out of work. 2. Identify Automatic Thoughts: Together, we will explore the automatic thought of 'They're going to think I'm not really sick' and the guilt associated with it. 3. Gather Evidence: I will guide you in questioning this thought by asking: 'What evidence do you have that others think negatively of you?' and 'What do you know about workplace policies regarding illness?' 4. Challenge the Thought: We will critically analyze the evidence you provide and identify any distortions present. I will ask, 'Is there a possibility that your coworkers understand illness?' and 'Have you ever felt negatively about someone taking time off for legitimate health reasons?' 5. Reframe the Thought: Based on our discussion, we will aim to create a balanced thought, such as, 'Taking care of my health is important, and others may understand my situation.' 6. Practice and Link to Behavior: We will discuss how to apply this questioning technique in future situations to reduce anxiety about others' perceptions and to reinforce the importance of prioritizing your health.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "Interrupting",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Anxious",
+    "resistance_internal_monologue": "I know we need to talk about my return to work, but I just feel so overwhelmed thinking about it. Can we just skip that for now?",
+    "resistance_rationale": "The client's anxiety about returning to work and feeling judged by others is likely causing them to interrupt discussions about their treatment. Their internal struggle with guilt and worry indicates a beginner level of resistance, as they may not yet fully articulate their concerns or express them directly."
+  },
+  {
+    "name": "Ryan",
+    "id": "40-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client has recently moved and has been dealing with the stress of unpacking and organizing their new living space. They have a complicated relationship with their parents, particularly their mother, where they feel judged and unsupported in their emotional needs. The client's friends were unable to support them during a time of need, leading to increased feelings of isolation.",
+    "helpless_belief": [
+      "I am incompetent.",
+      "I am trapped.",
+      "I am out of control."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am undesirable, unwanted."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "If I get really upset, then obviously the next step would be something destructive, like punching in a wall or a window.",
+    "intermediate_belief_depression": "Feeling upset is inappropriate and if I express my upset, it means I've made a communicative mistake or I am being unreasonable. Negative feelings are dangerous and must be avoided.",
+    "coping_strategies": "The client tends to avoid contact with their mother when feeling emotionally unwell to prevent a conversation that they anticipate will be frustrating and inauthentic. This indicates a pattern of avoidance in stressful situations. The client also seems to engage in social withdrawal when feeling mentally or physically unwell, as they avoided attending a friend's birthday party and communicating with their mother.",
+    "situation": "Feelings of exhaustion after trying to unpack at home without support from friends who cancelled on them.",
+    "auto_thought": "I am doing this alone because no one cares to help me or be with me.",
+    "emotion": [
+      "sad, down, lonely, unhappy",
+      "hurt"
+    ],
+    "behavior": "Social withdrawal, avoidance of contact with friends and mother.",
+    "cognitive_distortion": "Personalizing, Mind Reading, Emotional Reasoning",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "1. Introduce the Session: Begin by discussing the client's recent feelings of exhaustion and isolation after unpacking alone. Acknowledge the difficulty of feeling unsupported and the emotional weight of these situations. 2. Identify the Automatic Thought: Highlight the client's thought: 'I am doing this alone because no one cares to help me or be with me.' 3. Challenge the Thought: Use Evidence-Based Questioning to explore the validity of this thought. Ask questions such as: - 'What evidence do you have that no one cares?' - 'Can you think of times your friends or family have offered support?' - 'What might they have been dealing with that prevented them from helping this time?' 4. Gather Evidence: Encourage the client to list positive interactions or support they've received in the past. Discuss instances when friends or family have shown they care. 5. Reassess Feelings: After gathering evidence, ask the client how they feel about their initial thought. Encourage them to consider a more balanced perspective. 6. Develop Alternative Thoughts: Collaboratively create alternative, more compassionate thoughts. For example, 'While it felt like I was alone, my friends may have had their reasons for not being able to help.' 7. Practice Reframing: Encourage the client to use these alternative thoughts in future situations where they feel unsupported. Role-play scenarios where they can practice expressing their feelings to friends or family. 8. Homework Assignment: Suggest the client reach out to a friend or family member and express their feelings of loneliness and need for support, using the alternative thoughts as a guide.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "In-session withdrawal",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Withdrawn",
+    "resistance_internal_monologue": "I just feel so alone in this, like nothing I say will really matter.",
+    "resistance_rationale": "The client's history of emotional struggles and patterns of social withdrawal indicate a tendency to disengage during sessions, particularly when feeling unsupported. Their beliefs about expressing emotions as inappropriate further contribute to their mild resistance, making them hesitant to engage fully in the therapeutic process."
+  },
+  {
+    "name": "Ryan",
+    "id": "40-3",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client has recently moved and has been dealing with the stress of unpacking and organizing their new living space. They have a complicated relationship with their parents, particularly their mother, where they feel judged and unsupported in their emotional needs. The client's friends were unable to support them during a time of need, leading to increased feelings of isolation.",
+    "helpless_belief": [
+      "I am incompetent.",
+      "I am trapped.",
+      "I am out of control."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am undesirable, unwanted."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "If I get really upset, then obviously the next step would be something destructive, like punching in a wall or a window.",
+    "intermediate_belief_depression": "Feeling upset is inappropriate and if I express my upset, it means I've made a communicative mistake or I am being unreasonable. Negative feelings are dangerous and must be avoided.",
+    "coping_strategies": "The client tends to avoid contact with their mother when feeling emotionally unwell to prevent a conversation that they anticipate will be frustrating and inauthentic. This indicates a pattern of avoidance in stressful situations. The client also seems to engage in social withdrawal when feeling mentally or physically unwell, as they avoided attending a friend's birthday party and communicating with their mother.",
+    "situation": "Reflection on their family dynamics and perceived inability to express emotions within the family.",
+    "auto_thought": "If I show my emotions, I will be seen as unstable or offensive, and this will lead to conflict or dismissal.",
+    "emotion": [
+      "ashamed, embarrassed, humiliated",
+      "hurt"
+    ],
+    "behavior": "Suppressing emotions, overthinking communications, reluctance to engage in conversations about feelings.",
+    "cognitive_distortion": "Emotional Reasoning",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "1. Introduce the Concept and Identify the Target: We'll start by discussing your feelings about expressing emotions within your family, specifically how it leads you to believe that showing emotions is dangerous. We'll identify the emotional reasoning involved in this belief. 2. Clarify the Emotion: I'll ask you to articulate the emotions you're experiencing when you consider showing vulnerability. 3. Gather Evidence: We will examine the evidence for and against the belief that showing emotions will lead to conflict or dismissal. Questions may include: 'Have you ever shown emotions and received support?' and 'What evidence do you have that expressing emotions always leads to negative outcomes?' 4. Challenge the Belief: We will analyze the evidence together, identifying any cognitive distortions present in your thoughts. 5. Reframe the Thought: Based on the evidence gathered, we will work on reframing the belief to something more balanced, such as 'Expressing emotions might be challenging, but it can also lead to understanding and support.' 6. Practice and Link to Behavior: Your task will be to practice expressing a small emotion in a safe environment, noting the responses you receive and the outcomes, thus reinforcing the new belief.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "Interrupting",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Ambivalent",
+    "resistance_internal_monologue": "I want to express how I feel, but what if it just leads to more problems? Maybe I should just keep this to myself.",
+    "resistance_rationale": "The client's history of feeling judged and unsupported, combined with their belief that expressing emotions is dangerous, indicates a tendency to interrupt their own expressions of feelings. Their ambivalence about sharing emotions reflects a beginner level of resistance, as they grapple with the fear of being misunderstood or rejected."
+  },
+  {
+    "name": "Skyler",
+    "id": "43-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client has had experiences of feeling unheard and emotionally invalidated since a young age, such as the recollection of being chastised for crying as a child. They have struggled with depression. Their interactions with Edson and others may have reactivated these historical feelings of invalidation.",
+    "helpless_belief": [],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am undesirable, unwanted.",
+      "I am bound to be rejected.",
+      "I am bound to be abandoned.",
+      "I am bound to be alone."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "People will not find me worth their time. If someone does not reach out to me, it means they do not value me. If I am not explicitly included, I am unwanted. My worth is contingent on others' acceptance.",
+    "intermediate_belief_depression": "When I am depressed, no one will want to be around me. If I'm not perfect, people will reject me. My value to friends is conditional on my ability to be socially available and upbeat.",
+    "coping_strategies": "The client uses avoidance like declining invitations or rebuffing attempts to interact (such as Edson's dinner invitation) as a protective measure. They seek affirmation from others to combat feelings of rejection but also distance themselves from situations where they could potentially feel hurt.",
+    "situation": "Seeing Edson's attempt to reinitiate contact after a period of silence.",
+    "auto_thought": "He only reaches out when it suits him, I am not valued.",
+    "emotion": [
+      "disappointed",
+      "hurt"
+    ],
+    "behavior": "Declines invitation, withdraws from interaction.",
+    "cognitive_distortion": "Mind Reading, Overgeneralizing, Labeling",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "1. Introduce the Concept: We will start by discussing your feelings regarding Edson's attempt to reinitiate contact and how it has led to thoughts about your value and desirability. I will explain the concept of mind reading and how it relates to your feelings of being unwanted. 2. Identify Automatic Thoughts: Together, we will identify the automatic thoughts that arise when you perceive Edson's actions, such as 'He only reaches out when it suits him.' 3. Challenge Assumptions: I will guide you through evidence-based questioning by asking: - 'What evidence do you have that Edson only reaches out when it suits him?' - 'What other reasons could there be for his attempt to connect?' 4. Gather Counter-Evidence: We will brainstorm instances where Edson or others have shown they value you. This can include past interactions or support. 5. Reassess the Thought: After gathering evidence, we will reassess your automatic thought. I will ask, 'Given this new evidence, how do you feel about your initial thought now?' 6. Reframe the Thought: Together, we will create a new statement to replace the negative thought. For example, instead of thinking 'I am not valued,' we might say, 'Edson reaching out shows he cares, and I have value regardless of who reaches out to me.' 7. Practice: As a follow-up, I will encourage you to apply this questioning technique in other situations where you might feel undervalued or rejected. This practice will help reinforce more balanced thinking.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "Criticizing the therapist",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Hurt",
+    "resistance_internal_monologue": "I just feel like you don't really understand how alone I am, and that makes me question if this is even worth it.",
+    "resistance_rationale": "The client's history of feeling unheard and invalidated influences their reluctance to fully engage in therapy. Their automatic thoughts and beliefs about being unwanted and unlovable may lead them to question the therapist's understanding and effectiveness, reflecting a mild level of resistance through subtle criticism."
+  },
+  {
+    "name": "Elena",
+    "id": "44-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client has a complex family dynamic with recurrent conflicts and relational strains. The client has presented issues with trust and boundaries among family members and associates, some of whom struggle with alcoholism, a relative who she feels has taken advantage of her generosity, and shows a general frustration with the people surrounding her. The client discusses past episodes of significant aggressive behavior and indicates a history of violence.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am powerless, weak, vulnerable."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be alone."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "People always take advantage of me, I need to be assertive to not be a victim, I must protect myself from being hurt by others, I can't rely on anyone.",
+    "intermediate_belief_depression": "When I'm depressed, I believe that I will always be alone because nobody cares, I'm unlovable, and it's useless to try because people will disappoint me.",
+    "coping_strategies": "Avoidance of social interactions to prevent feeling overwhelmed by rage, client stays at home and isolates in the bedroom.",
+    "situation": "Considering reaching out to an estranged individual who has hurt her.",
+    "auto_thought": "He may come back and say sorry, but it won't be genuine. It will be the same cycle all over again.",
+    "emotion": [
+      "disappointed",
+      "hurt"
+    ],
+    "behavior": "Debates internally whether to re-initiate contact, ultimately choosing not to out of self-protection.",
+    "cognitive_distortion": "Fortune Telling, Catastrophizing, Overgeneralizing",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "Evidence-Based Questioning\n1. Introduce the Session and Identify the Automatic Thought: We will start by discussing your thoughts about reaching out to the estranged individual. Specifically, we'll focus on the automatic thought that 'he may come back and say sorry, but it won't be genuine.' I will explain the concept of fortune telling and how it relates to predicting negative outcomes without evidence.\n2. Explore the Context: Together, we will review the history of your relationship with this individual and discuss specific past interactions. I will ask you to describe instances where this person may have shown genuine remorse or changed behavior.\n3. Challenge the Automatic Thought: I will guide you through a series of evidence-based questions to examine the validity of your belief. For example, I will ask: 'What evidence do you have that his apology will not be genuine?' and 'Have there been times when he has shown sincerity?'\n4. Identify Cognitive Distortions: As we explore these questions, we will identify any cognitive distortions in your thinking, such as overgeneralizing (assuming that all attempts at reconnection will fail) or catastrophizing (believing the worst will happen).\n5. Generate Alternative Thoughts: Based on our discussion, I will encourage you to generate alternative, more balanced thoughts. For example, we might reframe the thought to: 'While there is a chance that his apology may not be sincere, there is also a possibility that he has changed and is genuinely remorseful.'\n6. Evaluate the Emotional Impact: We will reflect on how these alternative thoughts make you feel compared to the original thought. I will ask, 'How do you feel when you consider the possibility of a sincere apology versus the belief that it will always be insincere?'\n7. Develop an Action Plan: Finally, we will discuss the next steps regarding reaching out. I will help you to create a plan that includes setting boundaries and preparing for different outcomes, emphasizing that it is okay to protect yourself while also being open to new possibilities. Our goal will be to empower you to take a step forward without feeling trapped by fear of disappointment.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "In-session withdrawal",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Withdrawn",
+    "resistance_internal_monologue": "I want to reach out, but what if it just ends up hurting me again? Maybe I should just keep to myself.",
+    "resistance_rationale": "The client has a history of avoidance and isolation as coping strategies, reflecting a fear of vulnerability and emotional pain. Their belief in being unlovable and the perception of others as untrustworthy contribute to a tendency to withdraw in therapy, particularly when discussing sensitive topics like reinitiating contact with someone who has previously hurt them."
+  },
+  {
+    "name": "Violet",
+    "id": "46-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client has a history of being involved with friends who are experiencing significant stressors, such as a friend Yvonne dealing with tenure and an autistic child. The client has an emotional involvement with these individuals and seems to feel a sense of responsibility towards them.",
+    "helpless_belief": [
+      "I am powerless, weak, vulnerable.",
+      "I am a victim.",
+      "I am needy."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be rejected."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "If I don't support my friends, no one will; I must always be available to help others, even at my own expense.",
+    "intermediate_belief_depression": "My friends' happiness and stability rest upon my shoulders; I have to absorb their negative feelings to help them.",
+    "coping_strategies": "The client uses emotional support from friends as a coping strategy but finds it draining because these friends are also dealing with their own depressive states and crises. The client feels guilty for wanting to set boundaries and limit time spent with these friends.",
+    "situation": "Dealing with the reality of all friends being unhappy and the client's own involvement in their lives.",
+    "auto_thought": "None of my efforts matter; I can't make anyone happy, and I am just as unhappy as they are.",
+    "emotion": [
+      "sad, down, lonely, unhappy",
+      "guilty"
+    ],
+    "behavior": "Ruminates on friends' unhappiness, doubts ability to be helpful, possibly neglects own needs.",
+    "cognitive_distortion": "Personalizing, Emotional Reasoning, Should Statements",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "Evidence-Based Questioning\n1. Introduction: Begin the session by discussing the client's feelings of responsibility for their friends' unhappiness. Acknowledge their emotional involvement and validate their concerns.\n2. Identify Thoughts: Ask the client to articulate their automatic thoughts related to their friends' happiness and their role in it, particularly focusing on the thought: 'None of my efforts matter; I can't make anyone happy.'\n3. Challenge the Thought: Introduce evidence-based questioning. Prompt the client with questions such as: 'What evidence do you have that your efforts do not matter?' and 'Can you recall instances where your support positively impacted your friends?' \n4. Explore Alternative Perspectives: Discuss the idea that while they may feel responsible, they are not the sole determinants of their friends' happiness. Encourage the client to consider how their friends might have their own resources or support systems.\n5. Reframe the Belief: Work together to reframe their belief about their role and responsibilities. Create a statement that reflects a more balanced view, such as: 'While I care about my friends, I am not solely responsible for their happiness; I can also prioritize my own needs.' \n6. Discuss Boundaries: Talk about the importance of setting boundaries to maintain their well-being. Explore feelings of guilt associated with this and how to manage those feelings.\n7. Practice: Assign the client the task of journaling instances where they feel responsible for others' emotions and reflecting on the evidence supporting or contradicting this belief. Encourage them to practice using evidence-based questioning in their daily life to challenge similar thoughts.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "Sidetracking",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Ambivalent",
+    "resistance_internal_monologue": "I know I should be focusing on my own feelings, but my friends need me right now. It's hard to think about myself when they're struggling.",
+    "resistance_rationale": "The client feels a strong sense of responsibility towards their friends and often prioritizes their needs over their own. This leads to a tendency to sidetrack discussions about personal issues, as they may feel guilty for not being available for their friends, which aligns with a beginner level of resistance characterized by internal ambivalence."
+  },
+  {
+    "name": "Owen",
+    "id": "49-1",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client has a history that involves complex and strained family relationships. The client's father is described as making everyone around him miserable and has always been unhappy with his life. The client's grandmother (mother's mother) also had a similarly negative impact on the family, particularly on the client's mother, which has influenced the client's perception of familial relationships.",
+    "helpless_belief": [
+      "I am powerless, weak, vulnerable.",
+      "I am trapped.",
+      "I am out of control."
+    ],
+    "unlovable_belief": [],
+    "worthless_belief": [],
+    "intermediate_belief": "I must always be prepared for the worst-case scenario; I am responsible for fulfilling others' expectations and wishes even if it's difficult.",
+    "intermediate_belief_depression": "My worries are overwhelming and I am unable to find solutions; my thoughts are uncontrollable and lean towards the morbid.",
+    "coping_strategies": "The client engages in anticipatory planning for worst-case scenarios, exhibiting anxiety about future events that may or may not happen. Though possibly initially intended to be productive, this strategy seems to result in increased anxiety and guilt. The client also exhibits avoidance by delaying to look for consulates or make travel plans, despite acknowledging these tasks as necessary.",
+    "situation": "Remembering dad's clear wishes for burial in Nepal and feeling overwhelmed with the logistics and responsibility.",
+    "auto_thought": "How will we manage the logistics of fulfilling dad's last wishes? I'm stuck in this situation with no plan.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "guilty"
+    ],
+    "behavior": "Becomes trapped in an anxiety spiral, contemplating the steep challenges of international burial logistics.",
+    "cognitive_distortion": "Catastrophizing, Fortune Telling, Should Statements",
+    "cbt_technique": "Decatastrophizing",
+    "counseling_plan": "Decatastrophizing Technique\n1. Introduce the Concept: Begin by explaining the concept of catastrophizing and how it relates to the client's feelings of being overwhelmed by the logistics of fulfilling their father's wishes. Emphasize that we will work on reframing these thoughts to reduce anxiety.\n2. Identify Specific Thoughts: Ask the client to share specific thoughts that are contributing to their anxiety about the logistics. For example, inquire about the worst-case scenarios they envision and how they believe they must fulfill their father's wishes perfectly.\n3. Challenge Catastrophic Thoughts: Guide the client in identifying evidence that contradicts their catastrophic thoughts. Ask questions like, \"What evidence do you have that this situation is as dire as you believe?\" and \"Have others faced similar situations and managed to fulfill their loved one's wishes?\"\n4. Explore the Likelihood of Worst-Case Scenarios: Help the client evaluate the actual likelihood of the worst-case scenarios occurring. Use a scale of 0-100% to rate the probabilities of these scenarios happening and discuss why these ratings may be lower than initially thought.\n5. Generate Alternative Outcomes: Encourage the client to brainstorm alternative outcomes that are more positive or manageable. Ask them what steps they can take to address their concerns and how they might feel empowered by taking action.\n6. Create a Plan of Action: Work with the client to outline a realistic plan for managing the logistics involved in fulfilling their father's wishes. Break tasks into smaller, manageable steps to reduce feelings of being overwhelmed.\n7. Reframe the Narrative: Together, create a new narrative that acknowledges the challenges but also recognizes the client's strengths and capabilities. This might include statements like, \"I can take things one step at a time, and it's okay to seek help when I need it.\"\n8. Practice and Reflect: Assign the client the task of writing down any catastrophic thoughts they have in the coming week and reframing them using the techniques discussed in the session. Schedule a follow-up to review their experiences and strengthen their skills in decatastrophizing.",
+    "resistance_type": "Indirect",
+    "resistance_subtype": "In-session withdrawal",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Anxious",
+    "resistance_internal_monologue": "I just feel so overwhelmed thinking about all this. Maybe I should just stay quiet.",
+    "resistance_rationale": "The client exhibits signs of in-session withdrawal as they become trapped in an anxiety spiral regarding the logistics of fulfilling their father's wishes. Their overwhelming emotions and anticipatory planning suggest a tendency to disengage when faced with difficult discussions about their feelings and responsibilities, reflecting a beginner level of resistance."
+  },
+  {
+    "name": "Lily",
+    "id": "50-2",
+    "type": [
+      "plain",
+      "verbose",
+      "go off on tangents",
+      "hostile",
+      "guarded",
+      "ingratiating"
+    ],
+    "history": "The client describes a significant history with an individual named Ethan, with whom they have had a friendship spanning 14 years, since high school. This relationship includes periods where they supported each other through personal crises, such as the client's experience with an abusive ex-boyfriend, and professional collaborations at startups. The client learned through friends that Ethan has been involved in a serious situation, including abusive behavior towards his girlfriend, which has greatly distressed the client.",
+    "helpless_belief": [
+      "I am helpless.",
+      "I am out of control."
+    ],
+    "unlovable_belief": [
+      "I am unlovable.",
+      "I am bound to be rejected."
+    ],
+    "worthless_belief": [],
+    "intermediate_belief": "If I can't help someone, it means I've failed them. People who I get close to will end up hurting me or others.",
+    "intermediate_belief_depression": "When I'm unable to help a friend or resolve a situation, it's because I'm inadequate. If someone I'm close to does something terrible, it reflects my poor judgment in people.",
+    "coping_strategies": "Seeking support from friends, organizing group meetings for intervention, compiling spreadsheets of information and resources, excessive drinking, engaging in casual sex, and making effort to find Ethan a spot in rehab.",
+    "situation": "Inability to get in touch with Ethan directly and feeling helpless about the situation.",
+    "auto_thought": "It's my responsibility to fix this. I'm failing as a friend if I can't help Ethan.",
+    "emotion": [
+      "anxious, worried, fearful, scared, tense",
+      "sad, down, lonely, unhappy"
+    ],
+    "behavior": "Constantly trying to reach out to Ethan, becoming deeply affected by the situation to the point of feeling numb in other aspects of life.",
+    "cognitive_distortion": "Personalizing, Should Statements",
+    "cbt_technique": "Evidence-Based Questioning",
+    "counseling_plan": "1. Introduce the Concept: Begin the session by discussing the client's feelings of helplessness and responsibility regarding Ethan's situation. Explain how personalizing the situation contributes to their distress. 2. Identify the Automatic Thoughts: Ask the client to articulate their automatic thought: 'It's my responsibility to fix this. I'm failing as a friend if I can't help Ethan.' 3. Gather Evidence: Use evidence-based questioning to challenge the validity of this thought. Ask the client to provide evidence for and against this belief: - 'What evidence do you have that you are failing as a friend?' - 'Can you think of times when you supported friends without feeling responsible for their actions?' 4. Examine the Impact of the Thought: Discuss how this belief affects their emotions and behaviors, including their attempts to reach out to Ethan and their coping strategies. 5. Reframe the Thought: Help the client reframe their thought to a more balanced perspective, such as: 'I care about Ethan, but it is not solely my responsibility to fix his problems.' 6. Explore Alternatives: Encourage the client to consider what actions they can take that are supportive without overstepping boundaries or taking on undue responsibility. 7. Develop a Support Plan: Work together to create a plan for how to support Ethan that includes self-care strategies for the client to manage their own emotions during this difficult time. 8. Homework Assignment: Encourage the client to practice reframing their thoughts throughout the week and to identify specific examples where they can be supportive without feeling responsible for resolving the situation.",
+    "resistance_type": "Direct",
+    "resistance_subtype": "Explicitly disagreeing with the treatment rationale",
+    "resistance_level": "Beginner",
+    "resistance_emotion": "Ambivalent",
+    "resistance_internal_monologue": "I know I should focus on my own feelings, but I can't help feeling responsible for Ethan's situation. What if this approach just makes things worse?",
+    "resistance_rationale": "The client demonstrates ambivalence about the effectiveness of therapy in addressing their feelings of inadequacy and helplessness regarding their friend's situation. This reflects a beginner level of resistance where they are uncertain about engaging with the therapeutic process, often questioning its relevance to their specific emotional turmoil."
+  }
+]
