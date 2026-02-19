@@ -428,7 +428,7 @@ def run_policy(patient_id: str, deterministic: bool = True) -> dict:
 
 if __name__ == "__main__":
     # Example: run with a chosen case
-    result = run_policy(patient_id="1-1", deterministic=True)
+    result = run_policy(patient_id="1-2", deterministic=True)
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\nSaved rollout to: {OUT_PATH}")

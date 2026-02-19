@@ -42,7 +42,7 @@ from src.envs.therapist_skills import (
 # ----------------------------
 # Defaults / Paths
 # ----------------------------
-DEFAULT_DATA_PATH = Path("data/Patient_PSi_CM_advanced.json")
+DEFAULT_DATA_PATH = Path("data/Patient_PSi_CM_beginner.json")
 
 DEFAULT_CLIENT_PROMPT_PATH = Path("prompts/client.txt")
 DEFAULT_THERAPIST_PROMPT_PATH = Path("prompts/therapist_system.txt")
@@ -369,6 +369,9 @@ class TherapyEnv(gym.Env):
         self._last_moderator_raw = None
         self._convo = []
 
+        self._prev_action_id = None
+        self._same_action_streak = 0
+
         self._interval = trust_eval_interval(self._patient.get("resistance_level"))
 
         # 1) Therapist starts (no agent action for first greeting)
@@ -405,7 +408,7 @@ class TherapyEnv(gym.Env):
         # If already exceeded max turns, end (truncated)
         if self._turn > self.max_turns:
             # Run terminal evaluation one last time
-            reward, done, info = self._evaluate_after_client()
+            reward, done, info = self._evaluate_after_client(apply_repeat_penalty=False)
             obs = self._make_obs()
 
             terminated = False               # not a natural end, it's a time limit
@@ -415,6 +418,15 @@ class TherapyEnv(gym.Env):
 
         action = self._get_action(int(action_index))
         intervention_label = action["id"]
+
+        # ---- NEW: track repeated action streak ----
+        if self._prev_action_id == intervention_label:
+            self._same_action_streak += 1
+        else:
+            self._same_action_streak = 1
+        self._prev_action_id = intervention_label
+        # ------------------------------------------
+
         intervention_description = self._action_guidance_text(action)
 
         # 1) Therapist reply using chosen intervention
@@ -518,7 +530,7 @@ class TherapyEnv(gym.Env):
         )
         return client_text
 
-    def _evaluate_after_client(self) -> Tuple[float, bool, dict]:
+    def _evaluate_after_client(self, apply_repeat_penalty: bool = True) -> Tuple[float, bool, dict]:
         """
         Runs trust critic (optionally sparse) + moderator.
         Updates:
@@ -592,6 +604,8 @@ class TherapyEnv(gym.Env):
             cfg=self.reward_cfg,  # IMPORTANT: required by your updated reward_function.py
             alliance_score=alliance_score,
             therapist_skill_scores=skills_scores if skills_scores else None,
+            turn=self._turn,
+            same_action_streak=(self._same_action_streak if apply_repeat_penalty else None),
         )
 
         # Update prev trust only when critic ran (cleaner + avoids stale updates)
