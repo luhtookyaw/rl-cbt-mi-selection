@@ -327,8 +327,8 @@ def run_policy(patient_id: str, deterministic: bool = True) -> dict:
         convo.append({"role": "user", "content": client_text})
 
         # ---- Critic (trust/openness), sparse by resistance-level interval.
-        # Match env timing: run on first client turn and then every interval.
-        should_eval = ((t - 1) % critic_interval == 0)
+        # Run on exact multiples of interval (e.g., interval=2 => turns 2,4,6,...).
+        should_eval = (t % critic_interval == 0)
         critic_text = None
         score = None
         if should_eval:
@@ -428,7 +428,7 @@ def run_policy(patient_id: str, deterministic: bool = True) -> dict:
 
 if __name__ == "__main__":
     # Example: run with a chosen case
-    result = run_policy(patient_id="1-2", deterministic=True)
+    result = run_policy(patient_id="4-2", deterministic=False)
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\nSaved rollout to: {OUT_PATH}")

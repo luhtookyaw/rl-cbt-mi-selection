@@ -394,7 +394,9 @@ class TherapyEnv(gym.Env):
         client_text = self._client_respond()
         self._convo.append({"role": "user", "content": client_text})
 
-        # 3) Critic + moderator to set initial trust/phase/done signal
+        # 3) Initial evaluation pass for info/debugging.
+        # Critic is skipped at reset so sparse schedule starts from turn 1 steps,
+        # matching run_policy's interval logic.
         reward, done, info = self._evaluate_after_client()
 
         obs = self._make_obs()
@@ -543,7 +545,10 @@ class TherapyEnv(gym.Env):
         # ---- critic (trust/openness)
         should_eval = True
         if self.sparse_critic:
-            should_eval = (self._turn % self._interval == 0)
+            # Match run_policy semantics:
+            # - no critic run at reset (turn 0)
+            # - run only on exact multiples of interval (2,4,6... for interval=2)
+            should_eval = (self._turn > 0) and (self._turn % self._interval == 0)
 
         critic_text = None
         if should_eval:
@@ -798,7 +803,8 @@ class TherapyEnv(gym.Env):
             "dialogue_text": format_dialogue(self._convo, last_n=self.dialogue_window),
             "phase_idx": PHASE_TO_IDX.get(self._phase, 0),
             "trust_level": int(self._trust_level),
-            "turn": int(self._turn),
+            # Expose 1-based turn in observations to align with run_policy.
+            "turn": int(max(1, min(self._turn, self.max_turns))),
             "patient_id": str(self._patient.get("id", "")),
         }
 
