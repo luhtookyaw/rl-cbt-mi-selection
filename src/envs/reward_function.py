@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Optional, Dict, Any
+from typing import Dict, Any, Sequence, Hashable
 
 
 @dataclass
@@ -13,6 +13,8 @@ class RewardConfig:
     Notes:
     - Trust level is assumed to be in [1..5].
     - Delta trust is trust_t - prev_trust.
+    - Repeated action penalty discourages action loops by penalizing
+      how often the current action appeared in the last K steps.
     """
     r_step: float = 0.05   # per-step penalty
     r_abs: float = 0.1     # dense absolute trust bonus weight (0..1 scaled)
@@ -24,6 +26,10 @@ class RewardConfig:
     trust_min: int = 1
     trust_max: int = 5
 
+    # --- NEW: anti-loop repeated-action penalty ---
+    repeat_window: int = 5        # K: lookback window length
+    r_repeat_k: float = 0.15      # penalty per prior occurrence of current action in last K
+
 
 def compute_reward(
     *,
@@ -32,6 +38,8 @@ def compute_reward(
     critic_ran: bool,
     end_flag: bool,
     cfg: RewardConfig,
+    action: Hashable,
+    recent_actions: Sequence[Hashable] = (),
 ) -> tuple[float, Dict[str, Any]]:
     """
     Compute reward and return (reward, components).
@@ -42,6 +50,10 @@ def compute_reward(
       - Delta trust shaping only when critic ran: cfg.r_alpha * (trust - prev_trust)
       - Extra penalty on drops: -cfg.r_beta * max(0, prev_trust - trust)
       - Terminal shaping based on final trust (when end_flag): +/- cfg.r_gamma * ...
+      - NEW: Repeated action penalty (anti-loop):
+          Let K = cfg.repeat_window.
+          Let c = number of times `action` appears in the last K actions (excluding current).
+          Add penalty: -cfg.r_repeat_k * c
     """
     # Clamp trust to safe bounds (robustness)
     T = int(trust_level)
@@ -68,6 +80,13 @@ def compute_reward(
     drop_penalty = -float(cfg.r_beta) * drop
     reward += drop_penalty
 
+    # --- NEW: repeated action penalty (anti-loop, last K steps) ---
+    K = int(max(0, cfg.repeat_window))
+    window = list(recent_actions)[-K:] if K > 0 else []
+    repeat_count = sum(1 for a in window if a == action)  # prior occurrences in window
+    repeat_penalty = -float(cfg.r_repeat_k) * float(repeat_count)
+    reward += repeat_penalty
+
     # terminal shaping
     terminal_term = 0.0
     if end_flag:
@@ -77,7 +96,7 @@ def compute_reward(
             terminal_term = -float(cfg.r_gamma) * float(6 - T)
         reward += terminal_term
 
-    components = {
+    components: Dict[str, Any] = {
         "trust_level": T,
         "prev_trust_level": T_prev,
         "critic_ran": bool(critic_ran),
@@ -88,6 +107,10 @@ def compute_reward(
         "abs_bonus": abs_bonus,
         "delta_term": delta_term,
         "drop_penalty": drop_penalty,
+        # NEW fields
+        "repeat_window": K,
+        "repeat_count": int(repeat_count),
+        "repeat_penalty": float(repeat_penalty),
         "terminal_term": terminal_term,
         "total_reward": float(reward),
     }

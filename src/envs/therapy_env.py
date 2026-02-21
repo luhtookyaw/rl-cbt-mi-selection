@@ -27,7 +27,7 @@ import gymnasium as gym
 from gymnasium import spaces
 
 from src.llm import call_llm_messages
-from src.envs.reward_function import compute_reward
+from src.envs.reward_function import RewardConfig, compute_reward
 
 # ----------------------------
 # Defaults / Paths
@@ -197,6 +197,7 @@ class TherapyEnv(gym.Env):
         # If True, follow your sparse critic schedule (interval by resistance level)
         # If False, run critic every step (denser reward; often easier to train).
         sparse_critic: bool = True,
+        reward_cfg: Optional[RewardConfig] = None,
         seed: Optional[int] = None,
         fixed_patient_id: Optional[str] = None,
     ):
@@ -217,6 +218,7 @@ class TherapyEnv(gym.Env):
         self.therapist_temperature = therapist_temperature
         self.client_temperature = client_temperature
         self.sparse_critic = sparse_critic
+        self._reward_cfg = reward_cfg or RewardConfig()
 
         self._rng = random.Random(seed)
 
@@ -258,6 +260,7 @@ class TherapyEnv(gym.Env):
         self._convo: List[Dict[str, str]] = []  # [{"role":"assistant/user","content":...}, ...]
         self._last_critic_raw: Optional[str] = None
         self._last_moderator_raw: Optional[str] = None
+        self._recent_actions: List[str] = []
 
         # Track previous trust for delta reward
         self._prev_trust_level = 1
@@ -355,6 +358,7 @@ class TherapyEnv(gym.Env):
         self._last_critic_raw = None
         self._last_moderator_raw = None
         self._convo = []
+        self._recent_actions = []
 
         self._interval = trust_eval_interval(self._patient.get("resistance_level"))
 
@@ -379,7 +383,7 @@ class TherapyEnv(gym.Env):
         self._convo.append({"role": "user", "content": client_text})
 
         # 3) Critic + moderator to set initial trust/phase/done signal
-        reward, done, info = self._evaluate_after_client()
+        reward, done, info = self._evaluate_after_client(action_id="SESSION_START")
 
         obs = self._make_obs()
         return obs, info
@@ -423,7 +427,8 @@ class TherapyEnv(gym.Env):
         self._convo.append({"role": "user", "content": client_text})
 
         # 3) Critic + moderator; reward comes from trust/openness score
-        reward, done, info = self._evaluate_after_client()
+        reward, done, info = self._evaluate_after_client(action_id=intervention_label)
+        self._recent_actions.append(intervention_label)
 
         obs = self._make_obs()
 
@@ -494,7 +499,7 @@ class TherapyEnv(gym.Env):
         )
         return client_text
 
-    def _evaluate_after_client(self) -> Tuple[float, bool, dict]:
+    def _evaluate_after_client(self, action_id: str) -> Tuple[float, bool, dict]:
         """
         Runs trust critic (optionally sparse) + moderator.
         Updates:
@@ -554,6 +559,9 @@ class TherapyEnv(gym.Env):
             prev_trust_level=self._prev_trust_level,
             critic_ran=should_eval,
             end_flag=bool(end_flag),
+            cfg=self._reward_cfg,
+            action=action_id,
+            recent_actions=self._recent_actions,
         )
 
         # Update prev trust only when critic ran (cleaner + avoids stale updates)
