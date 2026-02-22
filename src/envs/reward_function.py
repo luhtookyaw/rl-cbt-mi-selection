@@ -27,7 +27,9 @@ class RewardConfig:
     trust_max: int = 5
 
     # --- NEW: anti-loop repeated-action penalty ---
+    enable_repeat_penalty: bool = False  # whether to apply repeated action penalty
     repeat_window: int = 5        # K: lookback window length
+    repeat_free_count: int = 2    # no penalty until count in window exceeds this
     r_repeat_k: float = 0.15      # penalty per prior occurrence of current action in last K
 
 
@@ -50,10 +52,11 @@ def compute_reward(
       - Delta trust shaping only when critic ran: cfg.r_alpha * (trust - prev_trust)
       - Extra penalty on drops: -cfg.r_beta * max(0, prev_trust - trust)
       - Terminal shaping based on final trust (when end_flag): +/- cfg.r_gamma * ...
-      - NEW: Repeated action penalty (anti-loop):
+      - Optional repeated action penalty (anti-loop):
           Let K = cfg.repeat_window.
           Let c = number of times `action` appears in the last K actions (excluding current).
-          Add penalty: -cfg.r_repeat_k * c
+          Let f = cfg.repeat_free_count.
+          Add penalty only when c > f: -cfg.r_repeat_k * (c - f)
     """
     # Clamp trust to safe bounds (robustness)
     T = int(trust_level)
@@ -84,7 +87,13 @@ def compute_reward(
     K = int(max(0, cfg.repeat_window))
     window = list(recent_actions)[-K:] if K > 0 else []
     repeat_count = sum(1 for a in window if a == action)  # prior occurrences in window
-    repeat_penalty = -float(cfg.r_repeat_k) * float(repeat_count)
+    free_count = int(max(0, cfg.repeat_free_count))
+    penalized_repeat_count = max(0, int(repeat_count) - free_count)
+    repeat_penalty = (
+        -float(cfg.r_repeat_k) * float(penalized_repeat_count)
+        if cfg.enable_repeat_penalty
+        else 0.0
+    )
     reward += repeat_penalty
 
     # terminal shaping
@@ -108,8 +117,11 @@ def compute_reward(
         "delta_term": delta_term,
         "drop_penalty": drop_penalty,
         # NEW fields
+        "enable_repeat_penalty": bool(cfg.enable_repeat_penalty),
         "repeat_window": K,
+        "repeat_free_count": int(free_count),
         "repeat_count": int(repeat_count),
+        "penalized_repeat_count": int(penalized_repeat_count),
         "repeat_penalty": float(repeat_penalty),
         "terminal_term": terminal_term,
         "total_reward": float(reward),

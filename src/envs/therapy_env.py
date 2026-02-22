@@ -50,7 +50,7 @@ PHASE_UPGRADE_AT = {
     "solution_exploration": 999,
 }
 
-MAX_TURNS_DEFAULT = 25
+MAX_TURNS_DEFAULT = 50
 
 THERAPIST_FIRST_USER = (
     "Start the session.\n"
@@ -314,6 +314,13 @@ class TherapyEnv(gym.Env):
 
         return "\n\n".join(parts).strip()
 
+    def _format_constraint_block(self, value: Any) -> str:
+        if value is None:
+            return ""
+        if isinstance(value, list):
+            return "\n".join(f"- {str(x)}" for x in value if str(x).strip())
+        return str(value)
+
     # ----------------------------
     # Core env API
     # ----------------------------
@@ -366,6 +373,21 @@ class TherapyEnv(gym.Env):
         therapist_system = self._render_therapist_system(
             intervention_label="SESSION_START",
             intervention_description="Start the session: brief greeting and ask what brings the client to therapy.",
+            therapist_micro_skills=[
+                "Warm professional greeting",
+                "Psychological safety signaling",
+                "Non-directive curiosity",
+                "Calm conversational pacing",
+                "Rapport-first tone (not clinical/interrogative)"
+            ],
+            fidelity_check=[
+                "Greeting present but brief (1 sentence max)",
+                "Exactly one open-ended intake question",
+                "No advice, interpretation, or therapy techniques yet",
+                "No assumptions about client problems",
+                "Tone welcoming, respectful, and non-pressuring",
+                "Response remains within 3–8 sentences total"
+            ]
         )
 
         therapist_first = call_llm_messages(
@@ -401,11 +423,19 @@ class TherapyEnv(gym.Env):
         action = self._get_action(int(action_index))
         intervention_label = action["id"]
         intervention_description = self._action_guidance_text(action)
+        therapist_micro_skills = self._format_constraint_block(
+            action.get("therapist_micro_skills", [])
+        )
+        fidelity_check = self._format_constraint_block(
+            action.get("fidelity_check", action.get("fidelit_check", []))
+        )
 
         # 1) Therapist reply using chosen intervention
         therapist_system = self._render_therapist_system(
             intervention_label=intervention_label,
             intervention_description=intervention_description,
+            therapist_micro_skills=therapist_micro_skills,
+            fidelity_check=fidelity_check,
         )
 
         therapist_user = THERAPIST_USER_PROMPT.format(
@@ -456,19 +486,33 @@ class TherapyEnv(gym.Env):
     # ----------------------------
     # Internals: render + calls
     # ----------------------------
-    def _render_therapist_system(self, intervention_label: str, intervention_description: str) -> str:
+    def _render_therapist_system(
+        self,
+        intervention_label: str,
+        intervention_description: str,
+        therapist_micro_skills: Any = "",
+        fidelity_check: Any = "",
+    ) -> str:
         """
         Your updated therapist_system.txt should include placeholders:
-            {name}, {history}, {situation}, {intervention_label}, {intervention_description}
+            {name}, {history}, {situation}, {intervention_label},
+            {intervention_description}, {therapist_micro_skills}, {fidelity_check}
         """
         assert self._patient is not None
+        therapist_micro_skills_text = self._format_constraint_block(therapist_micro_skills)
+        fidelity_check_text = self._format_constraint_block(fidelity_check)
 
-        return self._therapist_template.format(
-            name=self._patient.get("name", ""),
-            history=self._patient.get("history", ""),
-            situation=self._patient.get("situation", ""),
-            intervention_label=intervention_label,
-            intervention_description=intervention_description,
+        return render_template(
+            self._therapist_template,
+            {
+                "name": self._patient.get("name", ""),
+                "history": self._patient.get("history", ""),
+                "situation": self._patient.get("situation", ""),
+                "intervention_label": intervention_label,
+                "intervention_description": intervention_description,
+                "therapist_micro_skills": therapist_micro_skills_text,
+                "fidelity_check": fidelity_check_text,
+            },
         )
 
     def _client_respond(self) -> str:
@@ -512,7 +556,9 @@ class TherapyEnv(gym.Env):
         # ---- critic (trust/openness)
         should_eval = True
         if self.sparse_critic:
-            should_eval = (self._turn % self._interval == 0)
+            # Conversation turn index: reset exchange is turn 1, first step is turn 2, etc.
+            convo_turn = self._turn + 1
+            should_eval = (convo_turn % self._interval == 0)
 
         critic_text = None
         if should_eval:
@@ -520,6 +566,7 @@ class TherapyEnv(gym.Env):
                 self._critic_template,
                 {"dialogue_context": format_dialogue(self._convo, last_n=self.critic_window)},
             )
+
             critic_text = call_llm_messages(
                 [{"role": "system", "content": critic_system}],
                 model=self.models.critic_model,

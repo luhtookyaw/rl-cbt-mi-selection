@@ -1,0 +1,21 @@
+Here is the current therapy dialogue.
+
+RECENT DIALOGUE:
+{dialogue_history}
+
+CLIENT CONTEXT:
+Relevant history: {history}
+Current situation: {situation}
+Current stage therapy: {stage_therapy}
+
+TASK:
+Select the SINGLE best intervention label appropriate for the current stage therapy for the therapist’s next turn
+
+Remember:
+- Choose only one intervention label.
+- Do not generate therapist dialogue.
+- Follow the system instructions for selection.
+
+Output format:
+intervention_label: <LABEL>
+rationale: <brief reason>

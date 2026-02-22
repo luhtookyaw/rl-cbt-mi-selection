@@ -2,7 +2,7 @@ import json
 import re
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 import numpy as np
 from stable_baselines3 import PPO
@@ -180,35 +180,57 @@ def action_guidance_text(action: dict) -> str:
     def bullets(items: List[str], prefix: str = "- ") -> str:
         return "\n".join(prefix + str(x) for x in items if str(x).strip())
 
-    # Shape A: legacy action schema
+    goal = action.get("goal", "")
+    steps = action.get("steps", []) or []
+    do = action.get("do", []) or []
+    avoid = action.get("avoid", []) or []
+    template = action.get("template", "")
+
     parts: List[str] = []
-    if action.get("label"):
-        parts.append(f"Intervention name: {action['label']}")
-    elif action.get("name"):
-        parts.append(f"Intervention name: {action['name']}")
-
-    if action.get("description"):
-        parts.append(f"Description: {action['description']}")
-    elif action.get("goal"):
-        parts.append(f"Goal: {action['goal']}")
-
-    if action.get("guidance"):
-        parts.append(f"How to do it: {action['guidance']}")
-    else:
-        steps = action.get("steps", []) or []
-        do = action.get("do", []) or []
-        avoid = action.get("avoid", []) or []
-        template = action.get("template", "")
-        if steps:
-            parts.append("Steps:\n" + bullets(steps))
-        if do:
-            parts.append("Do:\n" + bullets(do))
-        if avoid:
-            parts.append("Avoid:\n" + bullets(avoid))
-        if template:
-            parts.append(f"Example template (adapt to context): {template}")
+    if goal:
+        parts.append(f"Goal: {goal}")
+    if steps:
+        parts.append("Steps:\n" + bullets(steps))
+    if do:
+        parts.append("Do:\n" + bullets(do))
+    if avoid:
+        parts.append("Avoid:\n" + bullets(avoid))
+    if template:
+        parts.append(f"Example template (adapt to context): {template}")
 
     return "\n\n".join(parts).strip()
+
+
+def format_constraint_block(value) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, list):
+        return "\n".join(f"- {str(x)}" for x in value if str(x).strip())
+    return str(value)
+
+
+def render_therapist_system(
+    therapist_template: str,
+    patient: dict,
+    intervention_label: str,
+    intervention_description: str,
+    therapist_micro_skills: Any = "",
+    fidelity_check: Any = "",
+) -> str:
+    therapist_micro_skills_text = format_constraint_block(therapist_micro_skills)
+    fidelity_check_text = format_constraint_block(fidelity_check)
+    return render_template(
+        therapist_template,
+        {
+            "name": patient.get("name", ""),
+            "history": patient.get("history", ""),
+            "situation": patient.get("situation", ""),
+            "intervention_label": intervention_label,
+            "intervention_description": intervention_description,
+            "therapist_micro_skills": therapist_micro_skills_text,
+            "fidelity_check": fidelity_check_text,
+        },
+    )
 
 
 # -----------------------
@@ -277,22 +299,27 @@ def run_policy(patient_id: str, deterministic: bool = True) -> dict:
     convo: List[Dict[str, str]] = []
     turns: List[dict] = []
 
-    # Base therapist system (you can keep placeholders in your therapist_system.txt)
-    # IMPORTANT: your therapist_system.txt must accept these fields:
-    # {name} {history} {situation} plus {intervention_label} {intervention_description}
-    base_vars = {
-        "name": p.get("name", ""),
-        "history": p.get("history", ""),
-        "situation": p.get("situation", ""),
-        "cbt_technique": p.get("cbt_technique", ""),
-        "cbt_plan": p.get("counseling_plan", ""),
-    }
-
     # ---- Therapist starts (SESSION_START)
-    therapist_system = therapist_template.format(
-        **base_vars,
+    therapist_system = render_therapist_system(
+        therapist_template=therapist_template,
+        patient=p,
         intervention_label="SESSION_START",
-        intervention_description="Start the session: greet briefly and ask what brings the client to therapy.",
+        intervention_description="Start the session: brief greeting and ask what brings the client to therapy.",
+        therapist_micro_skills=[
+            "Warm professional greeting",
+            "Psychological safety signaling",
+            "Non-directive curiosity",
+            "Calm conversational pacing",
+            "Rapport-first tone (not clinical/interrogative)",
+        ],
+        fidelity_check=[
+            "Greeting present but brief (1 sentence max)",
+            "Exactly one open-ended intake question",
+            "No advice, interpretation, or therapy techniques yet",
+            "No assumptions about client problems",
+            "Tone welcoming, respectful, and non-pressuring",
+            "Response remains within 3–8 sentences total",
+        ],
     )
 
     therapist_first = call_llm_messages(
@@ -327,8 +354,8 @@ def run_policy(patient_id: str, deterministic: bool = True) -> dict:
         convo.append({"role": "user", "content": client_text})
 
         # ---- Critic (trust/openness), sparse by resistance-level interval.
-        # Match env timing: run on first client turn and then every interval.
-        should_eval = ((t - 1) % critic_interval == 0)
+        # Start critic from turn 2, then evaluate every `critic_interval` turns.
+        should_eval = (t >= 2) and (((t - 2) % critic_interval) == 0)
         critic_text = None
         score = None
         if should_eval:
@@ -370,6 +397,8 @@ def run_policy(patient_id: str, deterministic: bool = True) -> dict:
         action = actions[action_index]
         intervention_label = action["id"]
         intervention_description = action_guidance_text(action)
+        therapist_micro_skills = action.get("therapist_micro_skills", [])
+        fidelity_check = action.get("fidelity_check", action.get("fidelit_check", []))
 
         # ---- Save turn record (client just spoke; now agent picks next therapist intervention)
         turns.append({
@@ -403,10 +432,13 @@ def run_policy(patient_id: str, deterministic: bool = True) -> dict:
             break
 
         # ---- Therapist responds using chosen intervention
-        therapist_system = therapist_template.format(
-            **base_vars,
+        therapist_system = render_therapist_system(
+            therapist_template=therapist_template,
+            patient=p,
             intervention_label=intervention_label,
             intervention_description=intervention_description,
+            therapist_micro_skills=therapist_micro_skills,
+            fidelity_check=fidelity_check,
         )
 
         therapist_user = THERAPIST_USER_PROMPT.format(dialogue_context=format_dialogue(convo, last_n=24))
