@@ -50,7 +50,7 @@ PHASE_UPGRADE_AT = {
     "solution_exploration": 999,
 }
 
-MAX_TURNS_DEFAULT = 50
+MAX_TURNS_DEFAULT = 25
 
 THERAPIST_FIRST_USER = (
     "Start the session.\n"
@@ -288,7 +288,7 @@ class TherapyEnv(gym.Env):
 
     def _action_guidance_text(self, action: dict) -> str:
         """
-        Build intervention_description passed into therapist_system prompt.
+        Build guidance_steps passed into therapist_system prompt.
         Keep it concise and structured.
         """
         goal = action.get("goal", "")
@@ -320,6 +320,33 @@ class TherapyEnv(gym.Env):
         if isinstance(value, list):
             return "\n".join(f"- {str(x)}" for x in value if str(x).strip())
         return str(value)
+
+    def _format_guidance_steps(self, value: Any) -> str:
+        """
+        Normalize guidance steps into bullet lines for therapist prompt consistency.
+        """
+        if value is None:
+            return ""
+        if isinstance(value, list):
+            return "\n".join(f"- {str(x).strip()}" for x in value if str(x).strip())
+
+        text = str(value).strip()
+        if not text:
+            return ""
+
+        # First split by explicit newlines.
+        lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
+        # If selector returns one long paragraph, split into sentence-like steps.
+        if len(lines) == 1 and not lines[0].startswith(("-", "*")):
+            sentence_parts = re.split(r"(?<=[.!?])\s+", lines[0])
+            lines = [p.strip() for p in sentence_parts if p.strip()]
+
+        if lines:
+            if all(ln.startswith(("-", "*")) for ln in lines):
+                return "\n".join(lines)
+            return "\n".join(f"- {ln}" for ln in lines)
+
+        return f"- {text}"
 
     # ----------------------------
     # Core env API
@@ -372,22 +399,11 @@ class TherapyEnv(gym.Env):
         # 1) Therapist starts (no agent action for first greeting)
         therapist_system = self._render_therapist_system(
             intervention_label="SESSION_START",
-            intervention_description="Start the session: brief greeting and ask what brings the client to therapy.",
-            therapist_micro_skills=[
-                "Warm professional greeting",
-                "Psychological safety signaling",
-                "Non-directive curiosity",
-                "Calm conversational pacing",
-                "Rapport-first tone (not clinical/interrogative)"
-            ],
-            fidelity_check=[
-                "Greeting present but brief (1 sentence max)",
-                "Exactly one open-ended intake question",
-                "No advice, interpretation, or therapy techniques yet",
-                "No assumptions about client problems",
-                "Tone welcoming, respectful, and non-pressuring",
-                "Response remains within 3–8 sentences total"
-            ]
+            guidance_steps=(
+                "- Offer a brief, warm greeting.\n"
+                "- Ask one open-ended question about what brings the client to therapy.\n"
+                "- Do not give advice or interpretation in this opening turn."
+            ),
         )
 
         therapist_first = call_llm_messages(
@@ -410,7 +426,7 @@ class TherapyEnv(gym.Env):
         obs = self._make_obs()
         return obs, info
 
-    def step(self, action_index: int):
+    def step(self, action_index: int, guidance_steps_override: Optional[str] = None):
         assert self._patient is not None, "Call reset() before step()."
 
         self._turn += 1
@@ -422,20 +438,12 @@ class TherapyEnv(gym.Env):
 
         action = self._get_action(int(action_index))
         intervention_label = action["id"]
-        intervention_description = self._action_guidance_text(action)
-        therapist_micro_skills = self._format_constraint_block(
-            action.get("therapist_micro_skills", [])
-        )
-        fidelity_check = self._format_constraint_block(
-            action.get("fidelity_check", action.get("fidelit_check", []))
-        )
+        guidance_steps = guidance_steps_override or self._action_guidance_text(action)
 
         # 1) Therapist reply using chosen intervention
         therapist_system = self._render_therapist_system(
             intervention_label=intervention_label,
-            intervention_description=intervention_description,
-            therapist_micro_skills=therapist_micro_skills,
-            fidelity_check=fidelity_check,
+            guidance_steps=guidance_steps,
         )
 
         therapist_user = THERAPIST_USER_PROMPT.format(
@@ -489,18 +497,14 @@ class TherapyEnv(gym.Env):
     def _render_therapist_system(
         self,
         intervention_label: str,
-        intervention_description: str,
-        therapist_micro_skills: Any = "",
-        fidelity_check: Any = "",
+        guidance_steps: Any = "",
     ) -> str:
         """
         Your updated therapist_system.txt should include placeholders:
-            {name}, {history}, {situation}, {intervention_label},
-            {intervention_description}, {therapist_micro_skills}, {fidelity_check}
+            {name}, {history}, {situation}, {intervention_label}, {guidance_steps}
         """
         assert self._patient is not None
-        therapist_micro_skills_text = self._format_constraint_block(therapist_micro_skills)
-        fidelity_check_text = self._format_constraint_block(fidelity_check)
+        guidance_steps_text = self._format_guidance_steps(guidance_steps)
 
         return render_template(
             self._therapist_template,
@@ -509,9 +513,7 @@ class TherapyEnv(gym.Env):
                 "history": self._patient.get("history", ""),
                 "situation": self._patient.get("situation", ""),
                 "intervention_label": intervention_label,
-                "intervention_description": intervention_description,
-                "therapist_micro_skills": therapist_micro_skills_text,
-                "fidelity_check": fidelity_check_text,
+                "guidance_steps": guidance_steps_text,
             },
         )
 

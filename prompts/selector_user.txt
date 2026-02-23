@@ -7,9 +7,12 @@ CLIENT CONTEXT:
 Relevant history: {history}
 Current situation: {situation}
 Current stage therapy: {stage_therapy}
+Current trust level: {trust_level}
+Trust history (recent): {trust_history}
+Recent interventions: {recent_interventions}
 
 TASK:
-Select the SINGLE best intervention label appropriate for the current stage therapy for the therapist’s next turn
+Select the SINGLE best intervention label appropriate for the current stage therapy and current trust level in the therapist’s next turn
 
 Remember:
 - Choose only one intervention label.
@@ -19,3 +22,4 @@ Remember:
 Output format:
 intervention_label: <LABEL>
 rationale: <brief reason>
+guidance_steps: <5 concise therapist action steps>

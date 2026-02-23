@@ -213,12 +213,9 @@ def render_therapist_system(
     therapist_template: str,
     patient: dict,
     intervention_label: str,
-    intervention_description: str,
-    therapist_micro_skills: Any = "",
-    fidelity_check: Any = "",
+    guidance_steps: Any = "",
 ) -> str:
-    therapist_micro_skills_text = format_constraint_block(therapist_micro_skills)
-    fidelity_check_text = format_constraint_block(fidelity_check)
+    guidance_steps_text = format_constraint_block(guidance_steps)
     return render_template(
         therapist_template,
         {
@@ -226,9 +223,7 @@ def render_therapist_system(
             "history": patient.get("history", ""),
             "situation": patient.get("situation", ""),
             "intervention_label": intervention_label,
-            "intervention_description": intervention_description,
-            "therapist_micro_skills": therapist_micro_skills_text,
-            "fidelity_check": fidelity_check_text,
+            "guidance_steps": guidance_steps_text,
         },
     )
 
@@ -304,22 +299,11 @@ def run_policy(patient_id: str, deterministic: bool = True) -> dict:
         therapist_template=therapist_template,
         patient=p,
         intervention_label="SESSION_START",
-        intervention_description="Start the session: brief greeting and ask what brings the client to therapy.",
-        therapist_micro_skills=[
-            "Warm professional greeting",
-            "Psychological safety signaling",
-            "Non-directive curiosity",
-            "Calm conversational pacing",
-            "Rapport-first tone (not clinical/interrogative)",
-        ],
-        fidelity_check=[
-            "Greeting present but brief (1 sentence max)",
-            "Exactly one open-ended intake question",
-            "No advice, interpretation, or therapy techniques yet",
-            "No assumptions about client problems",
-            "Tone welcoming, respectful, and non-pressuring",
-            "Response remains within 3–8 sentences total",
-        ],
+        guidance_steps=(
+            "- Offer a brief, warm greeting.\n"
+            "- Ask one open-ended question about what brings the client to therapy.\n"
+            "- Do not give advice or interpretation in this opening turn."
+        ),
     )
 
     therapist_first = call_llm_messages(
@@ -396,9 +380,7 @@ def run_policy(patient_id: str, deterministic: bool = True) -> dict:
 
         action = actions[action_index]
         intervention_label = action["id"]
-        intervention_description = action_guidance_text(action)
-        therapist_micro_skills = action.get("therapist_micro_skills", [])
-        fidelity_check = action.get("fidelity_check", action.get("fidelit_check", []))
+        guidance_steps = action_guidance_text(action)
 
         # ---- Save turn record (client just spoke; now agent picks next therapist intervention)
         turns.append({
@@ -436,9 +418,7 @@ def run_policy(patient_id: str, deterministic: bool = True) -> dict:
             therapist_template=therapist_template,
             patient=p,
             intervention_label=intervention_label,
-            intervention_description=intervention_description,
-            therapist_micro_skills=therapist_micro_skills,
-            fidelity_check=fidelity_check,
+            guidance_steps=guidance_steps,
         )
 
         therapist_user = THERAPIST_USER_PROMPT.format(dialogue_context=format_dialogue(convo, last_n=24))
