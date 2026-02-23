@@ -171,7 +171,7 @@ def run_selector_session(
     patient_id: Optional[str] = "1-1",
     deterministic: bool = True,  # kept for API symmetry with run_policy.py
     sparse_critic: bool = True,
-    selector_model: str = "gpt-4o-mini",
+    selector_model: str = "gpt-4o",
 ) -> dict:
     del deterministic  # not used; selector is LLM-based
 
@@ -238,13 +238,14 @@ def run_selector_session(
             f"Phase: {info.get('phase')} | "
             f"Reward: {float(reward):.3f} | "
             f"Trust: {info.get('trust_level')} | End: {bool(terminated or truncated)}"
+            "\n"
         )
         if selector_rationale:
-            print(f"Selector rationale: {selector_rationale}")
+            print(f"Selector rationale: {selector_rationale}\n")
         if selector_guidance_steps:
-            print(f"Selector guidance_steps: {selector_guidance_steps}")
-        print(f"Therapist: {therapist_last}")
-        print(f"Client: {client_last}")
+            print(f"Selector guidance_steps: {selector_guidance_steps}\n")
+        print(f"THERAPIST: {therapist_last}\n")
+        print(f"CLIENT: {client_last}")
         print("\n" + "-" * 50 + "\n")
 
         if terminated or truncated:
@@ -261,7 +262,7 @@ def run_selector_session(
 
 
 if __name__ == "__main__":
-    result = run_selector_session(patient_id="1-1", sparse_critic=True, selector_model="gpt-4o-mini")
+    result = run_selector_session(patient_id="3-3", sparse_critic=True, selector_model="gpt-4o-mini")
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Saved selector rollout to: {OUT_PATH}")
