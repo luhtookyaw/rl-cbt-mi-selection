@@ -51,7 +51,14 @@ Provide exactly 5 concise therapist action steps, each:
 - Starting with “Do …”
 - Executable within one therapist turn
 - Limited to the selected intervention only
-- Focused on process guidance (not therapist wording)
+
+Focus On:
+- helping patient see new perspectives through guided discovery (e.g., examining evidence, considering alternatives, weighing advantages and disadvantages) through debate.
+- applying more central cognitions or behaviors that offered greater promise for progress.
+- applying consistent strategy for change that seemed very promising and incorporated the most appropriate cognitive-behavioral techniques.
+- understanding the patient’s “internal reality” thoroughly and adapting to communicating this understanding through appropriate verbal and non-verbal responses to the patient (e.g., the tone of the therapist’s response conveyed a sympathetic understanding of the client’s “message”).
+- displaying optimal levels of warmth, concern, confidence, genuineness, and professionalism, appropriate for this particular patient in this session.
+- encouraging patient as much as possible to take an active role during the session (e.g., by offering choices) so they could function as a “team”.
 
 ────────────────────────────────────────
 AVAILABLE INTERVENTIONS (CHOOSE FROM THESE ONLY)
